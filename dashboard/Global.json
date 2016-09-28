@@ -431,69 +431,40 @@
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
-          "seriesOverrides": [
-            {
-              "alias": "fermi_tx",
-              "yaxis": 1
-            },
-            {
-              "alias": "euler_tx",
-              "yaxis": 1
-            }
-          ],
+          "seriesOverrides": [],
           "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
               "refId": "A",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.009c02975d4c.traffic.rx.bytes), 'fermi_rx')",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.rx.bytes), 'ffv-vpn01_rx')",
               "textEditor": false
             },
             {
               "refId": "B",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.009c02975d4c.traffic.tx.bytes), 'fermi_tx')",
-              "textEditor": false
-            },
-            {
-              "refId": "C",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.c8cbb8c52a75.traffic.rx.bytes), 'euler_rx')",
-              "textEditor": false
-            },
-            {
-              "refId": "D",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.c8cbb8c52a75.traffic.tx.bytes), 'euler_tx')"
-            },
-            {
-              "refId": "E",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.7446a06579d2.traffic.rx.bytes), 'brewster_rx')"
-            },
-            {
-              "refId": "F",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.7446a06579d2.traffic.tx.bytes), 'brewster_tx')"
-            },
-            {
-              "refId": "G",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.rx.bytes), 'ffv-vpn01_rx')"
-            },
-            {
-              "refId": "H",
               "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.tx.bytes), 'ffv-vpn01_tx')",
               "textEditor": false
             },
             {
-              "hide": false,
-              "refId": "I",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.0007cb03b4ae.traffic.rx.bytes), 'gianotti_rx')",
+              "refId": "C",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd56bb.traffic.rx.bytes), 'ffv-vpn02_rx')",
               "textEditor": false
             },
             {
-              "refId": "J",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.0007cb03b4ae.traffic.tx.bytes), 'gianotti_tx')",
-              "textEditor": false
+              "refId": "D",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd56bb.traffic.tx.bytes), 'ffv-vpn02_tx')"
+            },
+            {
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.rx.bytes), 'ffv-vpn03_rx')",
+              "refId": "E"
+            },
+            {
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.tx.bytes), 'ffv-vpn03_tx')",
+              "refId": "F"
             }
           ],
-          "timeFrom": null,
+          "timeFrom": "7d",
           "timeShift": null,
           "title": "VPN-Server",
           "tooltip": {
@@ -566,7 +537,7 @@
   },
   "refresh": "1m",
   "schemaVersion": 12,
-  "version": 0,
+  "version": 5,
   "links": [],
   "gnetId": null
 }
