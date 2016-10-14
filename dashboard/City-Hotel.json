@@ -182,12 +182,12 @@
           ],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Nutzer",
+          "title": "Nutzer (akkumuliert)",
           "tooltip": {
             "msResolution": false,
             "shared": true,
             "sort": 0,
-            "value_type": "cumulative"
+            "value_type": "individual"
           },
           "type": "graph",
           "xaxis": {
@@ -341,7 +341,7 @@
   },
   "refresh": false,
   "schemaVersion": 12,
-  "version": 6,
+  "version": 9,
   "links": [],
   "gnetId": null
 }
