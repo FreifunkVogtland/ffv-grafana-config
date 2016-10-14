@@ -456,12 +456,12 @@
               "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd56bb.traffic.tx.bytes), 'ffv-vpn02_tx')"
             },
             {
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.rx.bytes), 'ffv-vpn03_rx')",
-              "refId": "E"
+              "refId": "E",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.525400baa5e3.traffic.rx.bytes), 'ffv-vpn03_rx')"
             },
             {
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.tx.bytes), 'ffv-vpn03_tx')",
-              "refId": "F"
+              "refId": "F",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.525400baa5e3.traffic.tx.bytes), 'ffv-vpn03_tx')"
             }
           ],
           "timeFrom": "7d",
@@ -537,7 +537,7 @@
   },
   "refresh": "1m",
   "schemaVersion": 12,
-  "version": 5,
+  "version": 6,
   "links": [],
   "gnetId": null
 }
