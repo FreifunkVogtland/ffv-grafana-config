@@ -1,7 +1,9 @@
 {
   "id": null,
   "title": "NodeThumbnails",
-  "tags": [],
+  "tags": [
+    "meshviewer"
+  ],
   "style": "dark",
   "timezone": "browser",
   "editable": true,
