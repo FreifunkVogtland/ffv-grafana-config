@@ -137,6 +137,26 @@ def generate_places(id_name_pairs, templatepath, outpath):
 		dump_json(dashboard, outfiletmp)
 		os.rename(outfiletmp, outfile)
 
+def generate_nodegroup(id_name_pairs, templatepath, outpath):
+	dashboard = json.load(open(os.path.join(templatepath, "nodegroup.json")))
+	filename = 'nodegroup.json'
+
+	dashboard['templating']['list'][0]['options'] = []
+	options = []
+	for p in id_name_pairs:
+		option = {
+			"value": p['id'],
+			"text": "%s (%s)" % (p['name'], p['id'])
+		}
+		options.append(option)
+
+	dashboard['templating']['list'][0]['options'] = sorted(options, key=lambda k: k['text'])
+	outfile = os.path.join(outpath, filename)
+	outfiletmp = os.path.join(outpath, '%s.tmp' % (filename))
+
+	dump_json(dashboard, outfiletmp)
+	os.rename(outfiletmp, outfile)
+
 def main():
 	if len(sys.argv) != 4:
 		print("./generate-dashboards.py NODELIST TEMPLATEPATH OUTPATH")
@@ -152,6 +172,7 @@ def main():
 
 	# store
 	generate_places(id_name_pairs, templatepath, outpath)
+	generate_nodegroup(id_name_pairs, templatepath, outpath)
 
 if __name__ == "__main__":
 	main()
