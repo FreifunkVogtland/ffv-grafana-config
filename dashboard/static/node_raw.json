@@ -1,40 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_LOCAL",
-      "label": "local",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "graphite",
-      "pluginName": "Graphite"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "graphite",
-      "name": "Graphite",
-      "version": "1.0.0"
-    }
-  ],
   "id": null,
   "title": "Node_RAW",
   "tags": [],
@@ -76,7 +40,7 @@
     "list": [
       {
         "current": {},
-        "datasource": "${DS_LOCAL}",
+        "datasource": "local",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -109,7 +73,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 0,
           "editable": true,
           "error": false,
@@ -206,7 +170,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "editable": true,
           "error": false,
           "format": "dtdurations",
@@ -282,7 +246,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "editable": true,
           "error": false,
           "format": "none",
@@ -357,7 +321,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 0,
           "editable": true,
           "error": false,
@@ -433,7 +397,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 0,
           "editable": true,
           "error": false,
@@ -503,7 +467,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 1,
           "editable": true,
           "error": false,
@@ -617,7 +581,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 1,
           "editable": true,
           "error": false,

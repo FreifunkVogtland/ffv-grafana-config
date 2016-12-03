@@ -1,34 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_LOCAL",
-      "label": "local",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "graphite",
-      "pluginName": "Graphite"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "graphite",
-      "name": "Graphite",
-      "version": "1.0.0"
-    }
-  ],
   "id": null,
   "title": "Global",
   "tags": [],
@@ -84,7 +54,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "editable": true,
           "error": false,
           "fill": 1,
@@ -187,7 +157,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 1,
           "editable": true,
           "error": false,
@@ -320,7 +290,7 @@
           "aliasColors": {},
           "bars": true,
           "cacheTimeout": "600",
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 1,
           "editable": true,
           "error": false,
@@ -443,7 +413,7 @@
             "gianotti_tx": "#FCEACA"
           },
           "bars": false,
-          "datasource": "${DS_LOCAL}",
+          "datasource": "local",
           "decimals": 1,
           "editable": true,
           "error": false,
