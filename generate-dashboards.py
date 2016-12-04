@@ -146,11 +146,21 @@ def generate_nodegroup(id_name_pairs, templatepath, outpath):
 	for p in id_name_pairs:
 		option = {
 			"value": p['id'],
-			"text": "%s (%s)" % (p['name'], p['id'])
+			"text": "%s (%s)" % (p['name'], p['id']),
+			"selected": False
 		}
 		options.append(option)
 
-	dashboard['templating']['list'][0]['options'] = sorted(options, key=lambda k: k['text'])
+	options = sorted(options, key=lambda k: k['text'])
+	if options:
+		options[0]['selected'] = True
+		dashboard['templating']['list'][0]['current'] = {
+			"tags": [],
+			"text": options[0]["text"],
+			"value": options[0]["value"]
+		}
+
+	dashboard['templating']['list'][0]['options'] = options
 	outfile = os.path.join(outpath, filename)
 	outfiletmp = os.path.join(outpath, '%s.tmp' % (filename))
 
@@ -166,11 +176,21 @@ def generate_node(id_name_pairs, templatepath, outpath):
 	for p in id_name_pairs:
 		option = {
 			"value": p['id'],
-			"text": p['name']
+			"text": p['name'],
+			"selected": False
 		}
 		options.append(option)
 
-	dashboard['templating']['list'][0]['options'] = sorted(options, key=lambda k: k['text'])
+	options = sorted(options, key=lambda k: k['text'])
+	if options:
+		options[0]['selected'] = True
+		dashboard['templating']['list'][0]['current'] = {
+			"tags": [],
+			"text": options[0]["text"],
+			"value": options[0]["value"]
+		}
+
+	dashboard['templating']['list'][0]['options'] = options
 	outfile = os.path.join(outpath, filename)
 	outfiletmp = os.path.join(outpath, '%s.tmp' % (filename))
 
