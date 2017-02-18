@@ -72,6 +72,10 @@ places = {
 		'regex': '^AE-Kirchpl1-Kerkermeister*',
 		'filename': "zum-kerkermeister.json",
 	},
+	"Parkhotel": {
+		'regex': '^PL-Raedel18-Parkhotel.*',
+		'filename': "parkhotel.json",
+	},
 }
 
 def dump_json(data, filename):
