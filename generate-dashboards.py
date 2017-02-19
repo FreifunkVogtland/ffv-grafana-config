@@ -73,7 +73,7 @@ places = {
 		'filename': "zum-kerkermeister.json",
 	},
 	"Parkhotel": {
-		'regex': '^PL-Raedel18-Parkhotel.*',
+		'regex': '^PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)',
 		'filename': "parkhotel.json",
 	},
 }
