@@ -92,6 +92,10 @@
               "target": "alias(freifunk.global.clients, 'clients')"
             },
             {
+              "refId": "B",
+              "target": "alias(freifunk.global.originators, 'originators')"
+            },
+            {
               "refId": "C",
               "target": "alias(freifunk.global.onlinenodes, 'online nodes')"
             }
