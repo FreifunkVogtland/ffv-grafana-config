@@ -464,6 +464,14 @@
             {
               "refId": "F",
               "target": "alias(nonNegativeDerivative(freifunk.nodes.525400baa5e3.traffic.tx.bytes), 'ffv-vpn03_tx')"
+            },
+            {
+              "refId": "G",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.901b0ebd9c4c.traffic.rx.bytes), 'ffv-vpn04_rx')"
+            },
+            {
+              "refId": "H",
+              "target": "alias(nonNegativeDerivative(freifunk.nodes.901b0ebd9c4c.traffic.tx.bytes), 'ffv-vpn04_tx')"
             }
           ],
           "timeFrom": "7d",
