@@ -128,6 +128,10 @@ places = {
 		'regex': '^S-.*',
 		'filename': "schoeneck.json",
 	},
+	"Steinberg": {
+		'regex': '^SBG-.*',
+		'filename': "steinberg.json",
+	},
 	"Treuen": {
 		'regex': '^TR-.*',
 		'filename': "treuen.json",
