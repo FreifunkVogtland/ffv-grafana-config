@@ -120,6 +120,10 @@ places = {
 		'regex': '^RDW-.*',
 		'filename': "rodewisch.json",
 	},
+	"Rosenbach": {
+		'regex': '^RB-.*',
+		'filename': "rosenbach.json",
+	},
 	"Schoeneck": {
 		'regex': '^S-.*',
 		'filename': "schoeneck.json",
