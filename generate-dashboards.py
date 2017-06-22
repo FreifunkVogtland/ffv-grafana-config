@@ -144,6 +144,10 @@ places = {
 		'regex': '^TR-.*',
 		'filename': "treuen.json",
 	},
+	"Triebel": {
+		'regex': '^T-.*',
+		'filename': "triebel.json",
+	},
 	"City-Hotel": {
 		'regex': '^PL-Neundorfer23-City-Hotel.*',
 		'filename': "city-hotel.json",
