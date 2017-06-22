@@ -28,6 +28,10 @@ places = {
 		'regex': '^B-.*',
 		'filename': "bergen.json",
 	},
+	"Bösenbrunn": {
+		'regex': '^BBN-.*',
+		'filename': "bösenbrunn.json",
+	},
 	"Falkenstein": {
 		'regex': '^FST-.*',
 		'filename': "falkenstein.json",
