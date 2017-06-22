@@ -72,6 +72,10 @@ places = {
 		'regex': '^MKN-.*',
 		'filename': "markneukirchen.json",
 	},
+	"Mühlental": {
+		'regex': '^MTL-.*',
+		'filename': "muehlental.json",
+	},
 	"Oelsnitz": {
 		'regex': '^OEL-.*',
 		'filename': "oelsnitz.json",
