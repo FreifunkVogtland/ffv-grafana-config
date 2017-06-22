@@ -16,6 +16,10 @@ places = {
 		'regex': '^AE-.*',
 		'filename': "auerbach.json",
 	},
+	"Bad Brambach": {
+		'regex': '^BB-.*',
+		'filename': "bad-brambach.json",
+	},
 	"Bad Elster": {
 		'regex': '^BE-.*',
 		'filename': "bad-elster.json",
