@@ -88,6 +88,10 @@ places = {
 		'regex': '^NSZ-.*',
 		'filename': "neuensalz.json",
 	},
+	"Neumark": {
+		'regex': '^NMK-.*',
+		'filename': "neumark.json",
+	},
 	"Oelsnitz": {
 		'regex': '^OEL-.*',
 		'filename': "oelsnitz.json",
