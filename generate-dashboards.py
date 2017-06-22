@@ -64,6 +64,10 @@ places = {
 		'regex': '^LEN-.*',
 		'filename': "Lengenfeld.json",
 	},
+	"Limbach": {
+		'regex': '^L-.*',
+		'filename': "limbach.json",
+	},
 	"Markneukirchen": {
 		'regex': '^MKN-.*',
 		'filename': "markneukirchen.json",
