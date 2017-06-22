@@ -36,6 +36,10 @@ places = {
 		'regex': '^EI-.*',
 		'filename': "eichigt.json",
 	},
+	"Ellefeld": {
+		'regex': '^ELL-.*',
+		'filename': "ellefeld.json",
+	},
 	"Falkenstein": {
 		'regex': '^FST-.*',
 		'filename': "falkenstein.json",
