@@ -40,6 +40,10 @@ places = {
 		'regex': '^ELL-.*',
 		'filename': "ellefeld.json",
 	},
+	"Elsterberg": {
+		'regex': '^ELS-.*',
+		'filename': "elsterberg.json",
+	},
 	"Falkenstein": {
 		'regex': '^FST-.*',
 		'filename': "falkenstein.json",
