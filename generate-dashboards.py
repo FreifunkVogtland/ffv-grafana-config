@@ -62,7 +62,7 @@ places = {
 	},
 	"Lengenfeld": {
 		'regex': '^LEN-.*',
-		'filename': "Lengenfeld.json",
+		'filename': "lengenfeld.json",
 	},
 	"Limbach": {
 		'regex': '^L-.*',
