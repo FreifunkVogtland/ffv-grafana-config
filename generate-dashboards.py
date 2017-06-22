@@ -52,6 +52,10 @@ places = {
 		'regex': '^GB-.*',
 		'filename': "gruenbach.json",
 	},
+	"Heinsdorfergrund": {
+		'regex': '^HDG-.*',
+		'filename': "heinsdorfergrund.json",
+	},
 	"Klingenthal": {
 		'regex': '^K-.*',
 		'filename': "klingenthal.json",
