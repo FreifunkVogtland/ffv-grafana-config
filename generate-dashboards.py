@@ -172,6 +172,10 @@ places = {
 		'regex': '^PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)',
 		'filename': "parkhotel.json",
 	},
+	"KlangGarten - Kurzfilm- & Musikfestival": {
+		'regex': '^PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)',
+		'filename': "klanggarten.json",
+	},
 }
 
 def dump_json(data, filename):
