@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8; -*-
 
 import copy
@@ -179,8 +179,8 @@ places = {
 }
 
 def dump_json(data, filename):
-	with open(filename, 'w') as f:
-		json.dump(data, f)
+	with open(filename, 'wb') as f:
+		f.write(json.dumps(data, ensure_ascii=False).encode('ascii', 'replace'))
 		f.flush()
 		os.fsync(f.fileno())
 
