@@ -179,10 +179,13 @@ places = {
 }
 
 def dump_json(data, filename):
-	with open(filename, 'wb') as f:
-		f.write(json.dumps(data, ensure_ascii=False).encode('ascii', 'replace'))
+	with open(filename, 'w') as f:
+		json.dump(data, f)
 		f.flush()
 		os.fsync(f.fileno())
+
+def asciify(s):
+	return s.encode('ascii', 'replace').decode('ascii')
 
 def get_id_name_pairs(nodelistjson):
 	id_name_pairs = []
@@ -196,7 +199,7 @@ def get_id_name_pairs(nodelistjson):
 
 		id_pair = {
 			'id': node['id'],
-			'name': node['name'],
+			'name': asciify(node['name']),
 		}
 		id_name_pairs.append(id_pair)
 
