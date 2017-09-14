@@ -29,11 +29,11 @@ places = {
 		'filename': "bergen.json",
 	},
 	"Bösenbrunn": {
-		'regex': '^BBN-.*',
+		'regex': '^BOE-.*',
 		'filename': "bösenbrunn.json",
 	},
 	"Eichigt": {
-		'regex': '^EI-.*',
+		'regex': '^EIC-.*',
 		'filename': "eichigt.json",
 	},
 	"Ellefeld": {
@@ -61,11 +61,11 @@ places = {
 		'filename': "klingenthal.json",
 	},
 	"Lengenfeld": {
-		'regex': '^LEN-.*',
+		'regex': '^LE-.*',
 		'filename': "lengenfeld.json",
 	},
 	"Limbach": {
-		'regex': '^L-.*',
+		'regex': '^LIM-.*',
 		'filename': "limbach.json",
 	},
 	"Markneukirchen": {
@@ -81,7 +81,7 @@ places = {
 		'filename': "muldenhammer.json",
 	},
 	"Netzschkau": {
-		'regex': '^NK-.*',
+		'regex': '^N-.*',
 		'filename': "netzschkau.json",
 	},
 	"Neuensalz": {
@@ -93,7 +93,7 @@ places = {
 		'filename': "neumark.json",
 	},
 	"Neustadt": {
-		'regex': '^N-.*',
+		'regex': '^NST-.*',
 		'filename': "neustadt.json",
 	},
 	"Oelsnitz": {
@@ -101,7 +101,7 @@ places = {
 		'filename': "oelsnitz.json",
 	},
 	"Pausa-Mühltroff": {
-		'regex': '^PM-.*',
+		'regex': '^PMF-.*',
 		'filename': "pausa-muehltroff.json",
 	},
 	"Plauen": {
@@ -121,7 +121,7 @@ places = {
 		'filename': "rodewisch.json",
 	},
 	"Rosenbach": {
-		'regex': '^RB-.*',
+		'regex': '^RBH-.*',
 		'filename': "rosenbach.json",
 	},
 	"Schöneck": {
@@ -133,11 +133,11 @@ places = {
 		'filename': "steinberg.json",
 	},
 	"Theuma": {
-		'regex': '^TH-.*',
+		'regex': '^T-.*',
 		'filename': "theuma.json",
 	},
 	"Tirpersdorf": {
-		'regex': '^TD-.*',
+		'regex': '^TDF-.*',
 		'filename': "tirpersdorf.json",
 	},
 	"Treuen": {
@@ -145,7 +145,7 @@ places = {
 		'filename': "treuen.json",
 	},
 	"Triebel": {
-		'regex': '^T-.*',
+		'regex': '^TRI-.*',
 		'filename': "triebel.json",
 	},
 	"Weischlitz": {
@@ -153,7 +153,7 @@ places = {
 		'filename': "weischlitz.json",
 	},
 	"Werda": {
-		'regex': '^W-.*',
+		'regex': '^WER-.*',
 		'filename': "werda.json",
 	},
 	"City-Hotel": {
