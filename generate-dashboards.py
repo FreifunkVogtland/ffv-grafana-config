@@ -11,170 +11,338 @@ places = {
 	"Adorf": {
 		'regex': '^A-.*',
 		'filename': "adorf.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Auerbach": {
 		'regex': '^AE-.*',
 		'filename': "auerbach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Bad Brambach": {
 		'regex': '^BB-.*',
 		'filename': "bad-brambach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Bad Elster": {
 		'regex': '^BE-.*',
 		'filename': "bad-elster.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Bergen": {
 		'regex': '^B-.*',
 		'filename': "bergen.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Bösenbrunn": {
 		'regex': '^BOE-.*',
 		'filename': "bösenbrunn.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Eichigt": {
 		'regex': '^EIC-.*',
 		'filename': "eichigt.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Ellefeld": {
 		'regex': '^ELL-.*',
 		'filename': "ellefeld.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Elsterberg": {
 		'regex': '^ELS-.*',
 		'filename': "elsterberg.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Falkenstein": {
 		'regex': '^FST-.*',
 		'filename': "falkenstein.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Grünbach": {
 		'regex': '^GB-.*',
 		'filename': "gruenbach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Heinsdorfergrund": {
 		'regex': '^HDG-.*',
 		'filename': "heinsdorfergrund.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Klingenthal": {
 		'regex': '^K-.*',
 		'filename': "klingenthal.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Lengenfeld": {
 		'regex': '^LE-.*',
 		'filename': "lengenfeld.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Limbach": {
 		'regex': '^LIM-.*',
 		'filename': "limbach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Markneukirchen": {
 		'regex': '^MKN-.*',
 		'filename': "markneukirchen.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Mühlental": {
 		'regex': '^MTL-.*',
 		'filename': "muehlental.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Muldenhammer": {
 		'regex': '^MH-.*',
 		'filename': "muldenhammer.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Netzschkau": {
 		'regex': '^N-.*',
 		'filename': "netzschkau.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Neuensalz": {
 		'regex': '^NSZ-.*',
 		'filename': "neuensalz.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Neumark": {
 		'regex': '^NMK-.*',
 		'filename': "neumark.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Neustadt": {
 		'regex': '^NST-.*',
 		'filename': "neustadt.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Oelsnitz": {
 		'regex': '^OEL-.*',
 		'filename': "oelsnitz.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Pausa-Mühltroff": {
 		'regex': '^PMF-.*',
 		'filename': "pausa-muehltroff.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Plauen": {
 		'regex': '^PL-.*',
 		'filename': "plauen.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Pöhl": {
 		'regex': '^POE-.*',
 		'filename': "poehl.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Reichenbach": {
 		'regex': '^RC-.*',
 		'filename': "reichenbach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Rodewisch": {
 		'regex': '^RDW-.*',
 		'filename': "rodewisch.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Rosenbach": {
 		'regex': '^RBH-.*',
 		'filename': "rosenbach.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Schöneck": {
 		'regex': '^S-.*',
 		'filename': "schoeneck.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Steinberg": {
 		'regex': '^SBG-.*',
 		'filename': "steinberg.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Theuma": {
 		'regex': '^T-.*',
 		'filename': "theuma.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Tirpersdorf": {
 		'regex': '^TDF-.*',
 		'filename': "tirpersdorf.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Treuen": {
 		'regex': '^TR-.*',
 		'filename': "treuen.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Triebel": {
 		'regex': '^TRI-.*',
 		'filename': "triebel.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Weischlitz": {
 		'regex': '^WEI-.*',
 		'filename': "weischlitz.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"Werda": {
 		'regex': '^WER-.*',
 		'filename': "werda.json",
+		'tags': [
+			'place',
+			'municipality',
+		],
 	},
 	"City-Hotel": {
 		'regex': '^PL-Neundorfer23-City-Hotel.*',
 		'filename': "city-hotel.json",
+		'tags': [
+			'place',
+			'venue',
+		],
 	},
 	"Hotel Alexandra": {
 		'regex': '^PL-Bahnhof17-HotelAlexandra.*',
 		'filename': "hotel-alexandra.json",
+		'tags': [
+			'place',
+			'venue',
+		],
 	},
 	"Zum Kerkermeister - Auerbach": {
 		'regex': '^AE-Kirchpl1-Kerkermeister*',
 		'filename': "zum-kerkermeister.json",
+		'tags': [
+			'place',
+			'venue',
+		],
 	},
 	"Parkhotel": {
 		'regex': '^PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)',
 		'filename': "parkhotel.json",
+		'tags': [
+			'place',
+			'venue',
+		],
 	},
 	"KlangGarten - Kurzfilm- & Musikfestival": {
 		'regex': '^PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)',
 		'filename': "klanggarten.json",
+		'tags': [
+			'place',
+			'event',
+		],
 	},
 }
 
@@ -209,12 +377,13 @@ def filter_id_name_pairs(id_name_pairs, regex):
 	r = re.compile(regex)
 	return list(filter(lambda n: r.match(n['name']), id_name_pairs))
 
-def generate_place_dashboard(id_name_pairs, place_template, title):
+def generate_place_dashboard(id_name_pairs, place_template, title, tags):
 	place = copy.deepcopy(place_template)
 	id_array = [p['id'] for p in id_name_pairs]
 	id_str = ','.join(id_array)
 
 	place['title'] = title
+	place['tags'] = tags
 	place['rows'][0]['panels'][0]['targets'][0]['target'] = "alias(sumSeries(freifunk.nodes.{%s}.clients), 'Nutzer')" % (id_str)
 
 	place['rows'][0]['panels'][1]['targets'] = []
@@ -235,12 +404,14 @@ def generate_places(id_name_pairs, templatepath, outpath):
 	place_template = json.load(open(os.path.join(templatepath, "place.json")))
 
 	for title in places:
+		print(title)
 		regex = places[title]['regex']
 		filename = places[title]['filename']
+		tags = places[title]['tags']
 
 		place_pairs = filter_id_name_pairs(id_name_pairs, regex)
 
-		dashboard = generate_place_dashboard(place_pairs, place_template, title)
+		dashboard = generate_place_dashboard(place_pairs, place_template, title, tags)
 
 		outfile = os.path.join(outpath, filename)
 		outfiletmp = os.path.join(outpath, '%s.tmp' % (filename))
