@@ -327,6 +327,14 @@
 			"venue"
 		]
 	},
+	"PL-Johanniskirche": {
+		"regex": "^PL-Johanniskirche-.*",
+		"filename": "pl_johanniskirche.json",
+		"tags": [
+			"place",
+			"venue"
+		]
+	},
 	"KlangGarten - Kurzfilm- & Musikfestival": {
 		"regex": "^PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)",
 		"filename": "klanggarten.json",
