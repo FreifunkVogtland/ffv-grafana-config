@@ -102,10 +102,6 @@
             {
               "refId": "D",
               "target": "alias(freifunk.global.nodes, 'nodes')"
-            },
-            {
-              "refId": "E",
-              "target": "alias(freifunk.global.originators, 'originators')"
             }
           ],
           "timeFrom": null,
