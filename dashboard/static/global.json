@@ -93,11 +93,19 @@
             },
             {
               "refId": "B",
-              "target": "alias(freifunk.global.originators, 'originators')"
+              "target": "alias(freifunk.global.onlinenodes, 'online nodes')"
             },
             {
               "refId": "C",
-              "target": "alias(freifunk.global.onlinenodes, 'online nodes')"
+              "target": "alias(freifunk.global.offlinenodes, 'offline nodes')"
+            },
+            {
+              "refId": "D",
+              "target": "alias(freifunk.global.nodes, 'nodes')"
+            },
+            {
+              "refId": "E",
+              "target": "alias(freifunk.global.originators, 'originators')"
             }
           ],
           "timeFrom": null,
