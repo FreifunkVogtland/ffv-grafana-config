@@ -93,7 +93,7 @@
             },
             {
               "refId": "B",
-              "target": "alias(freifunk.global.onlinenodes, 'online nodes')"
+              "target": "alias(freifunk.global.nodes, 'online nodes')"
             },
             {
               "refId": "C",
@@ -101,7 +101,7 @@
             },
             {
               "refId": "D",
-              "target": "alias(freifunk.global.nodes, 'nodes')"
+              "target": "alias(sumSeries(freifunk.global.{nodes,offlinenodes}), 'nodes')"
             }
           ],
           "timeFrom": null,

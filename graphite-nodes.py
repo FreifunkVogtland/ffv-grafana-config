@@ -38,9 +38,8 @@ def main():
 	(onlinenodes_count, offlinenodes_count) = get_nodes_count(nodes)
 
 	timestamp = int(time.time())
-	print("freifunk.global.onlinenodes %u %u" % (onlinenodes_count, timestamp))
+	print("freifunk.global.nodes %u %u" % (onlinenodes_count, timestamp))
 	print("freifunk.global.offlinenodes %u %u" % (offlinenodes_count, timestamp))
-	print("freifunk.global.nodes %u %u" % (onlinenodes_count + offlinenodes_count, timestamp))
 
 if __name__ == "__main__":
 	main()
