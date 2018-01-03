@@ -46,7 +46,7 @@
         "multi": false,
         "name": "node",
         "options": [],
-        "query": "freifunk.nodes.*",
+        "query": "freifunk.node.*",
         "refresh": 1,
         "regex": "",
         "type": "query",
@@ -109,7 +109,7 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(freifunk.nodes.$node.clients, 'clients')",
+              "target": "alias(sumSeries(freifunk.node.$node.*.clients.total), 'clients')",
               "textEditor": false
             }
           ],
@@ -220,7 +220,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "freifunk.nodes.$node.uptime"
+              "target": "sumSeries(freifunk.node.$node.*.uptime)"
             }
           ],
           "thresholds": "",
@@ -296,7 +296,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "freifunk.nodes.$node.loadavg"
+              "target": "sumSeries(freifunk.node.$node.*.loadavg)"
             }
           ],
           "thresholds": "",
@@ -372,7 +372,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "freifunk.nodes.$node.memory_usage"
+              "target": "sumSeries(freifunk.node.$node.*.memory.free)"
             }
           ],
           "thresholds": "",
@@ -448,7 +448,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "freifunk.nodes.$node.rootfs_usage"
+              "target": "sumSeries(freifunk.node.$node.rootfs_usage)"
             }
           ],
           "thresholds": "0.24;0.28",
@@ -502,31 +502,31 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.$node.traffic.rx.bytes), 'rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes)), 'rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.$node.traffic.tx.bytes), 'tx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes)), 'tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "C",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_rx.bytes), 'mgmt_rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_rx.bytes)), 'mgmt_rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_tx.bytes), 'mgmt_tx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_tx.bytes)), 'mgmt_tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.$node.traffic.forward.bytes), 'forward')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes)), 'forward')",
               "textEditor": false
             }
           ],
@@ -613,7 +613,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "aliasByNode(freifunk.nodes.$node.traffic.*.bytes, 4)"
+              "target": "aliasByNode(sumSeries(freifunk.node.$node.*.traffic.*.bytes), 4)"
             }
           ],
           "timeFrom": null,

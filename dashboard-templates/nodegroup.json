@@ -111,7 +111,7 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "aliasByNode(freifunk.nodes.$node.clients, 2)",
+              "target": "aliasByNode(sumSeries(freifunk.node.$node.*.clients.total), 2)",
               "textEditor": false
             }
           ],
@@ -203,31 +203,31 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.rx.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes)), 2)",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "B",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.tx.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes))",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "C",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_rx.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_rx.bytes))",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "D",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_tx.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_tx.bytes))",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "E",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.forward.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes))",
               "textEditor": false
             }
           ],
@@ -319,31 +319,31 @@
             {
               "hide": true,
               "refId": "A",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.rx.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes)), 2)",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.tx.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes)), 2)",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "C",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_rx.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_rx.bytes))",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "D",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.mgmt_tx.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_tx.bytes))",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "E",
-              "target": "nonNegativeDerivative(freifunk.nodes.$node.traffic.forward.bytes)",
+              "target": "sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes))",
               "textEditor": false
             }
           ],
@@ -435,19 +435,19 @@
             {
               "hide": true,
               "refId": "A",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.rx.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes)), 2)",
               "textEditor": false
             },
             {
               "hide": true,
               "refId": "B",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.tx.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes)), 2)",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "aliasByNode(nonNegativeDerivative(freifunk.nodes.$node.traffic.forward.bytes), 2)",
+              "target": "aliasByNode(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes)), 2)",
               "textEditor": false
             }
           ],

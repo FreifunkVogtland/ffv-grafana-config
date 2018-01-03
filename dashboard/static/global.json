@@ -89,7 +89,7 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(freifunk.global.clients, 'clients')"
+              "target": "alias(freifunk.global.clients.total, 'clients')"
             },
             {
               "refId": "B",
@@ -190,49 +190,49 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'rx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'tx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'tx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "C",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.mgmt_rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'mgmt_rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'mgmt_rx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.mgmt_tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'mgmt_tx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'mgmt_tx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.forward.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'forward')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.forward.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), 'forward')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "F",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{009c02975d4c,7446a06579d2,c8cbb8c52a75,0007cb03b4ae}.traffic.tx.bytes)), 'tx nur vpn')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.{009c02975d4c,7446a06579d2,c8cbb8c52a75,0007cb03b4ae}.*.traffic.tx.bytes)), 'tx nur vpn')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "H",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75'))), 'tx ohne vpn')",
+              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75'))), 'tx ohne vpn')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "I",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.*.traffic.tx.bytes)), 'tx gesamt')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.*.*.traffic.tx.bytes)), 'tx gesamt')",
               "textEditor": true
             }
           ],
@@ -321,31 +321,31 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'rx')",
+              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'tx')",
+              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "C",
-              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.mgmt_rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'mgmt_rx')",
+              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_rx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'mgmt_rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.mgmt_tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'mgmt_tx')",
+              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_tx.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'mgmt_tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.nodes.*.traffic.forward.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'forward')",
+              "target": "alias(summarize(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.forward.bytes, '009c02975d4c|7446a06579d2|c8cbb8c52a75|005056bd6c6e|0007cb03b4ae'))), '24h', 'sum', false), 'forward')",
               "textEditor": false
             }
           ],
@@ -444,38 +444,38 @@
           "targets": [
             {
               "refId": "A",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.rx.bytes), 'ffv-vpn01_rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.005056bd6c6e.*.traffic.rx.bytes)), 'ffv-vpn01_rx')",
               "textEditor": false
             },
             {
               "refId": "B",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd6c6e.traffic.tx.bytes), 'ffv-vpn01_tx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.005056bd6c6e.*.traffic.tx.bytes)), 'ffv-vpn01_tx')",
               "textEditor": false
             },
             {
               "refId": "C",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd56bb.traffic.rx.bytes), 'ffv-vpn02_rx')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.005056bd56bb.*.traffic.rx.bytes)), 'ffv-vpn02_rx')",
               "textEditor": false
             },
             {
               "refId": "D",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.005056bd56bb.traffic.tx.bytes), 'ffv-vpn02_tx')"
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.005056bd56bb.*.traffic.tx.bytes)), 'ffv-vpn02_tx')"
             },
             {
               "refId": "E",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.525400baa5e3.traffic.rx.bytes), 'ffv-vpn03_rx')"
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.525400baa5e3.*.traffic.rx.bytes)), 'ffv-vpn03_rx')"
             },
             {
               "refId": "F",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.525400baa5e3.traffic.tx.bytes), 'ffv-vpn03_tx')"
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.525400baa5e3.*.traffic.tx.bytes)), 'ffv-vpn03_tx')"
             },
             {
               "refId": "G",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.901b0ebd9c4c.traffic.rx.bytes), 'ffv-vpn04_rx')"
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.901b0ebd9c4c.*.traffic.rx.bytes)), 'ffv-vpn04_rx')"
             },
             {
               "refId": "H",
-              "target": "alias(nonNegativeDerivative(freifunk.nodes.901b0ebd9c4c.traffic.tx.bytes), 'ffv-vpn04_tx')"
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.901b0ebd9c4c.*.traffic.tx.bytes)), 'ffv-vpn04_tx')"
             }
           ],
           "timeFrom": "7d",

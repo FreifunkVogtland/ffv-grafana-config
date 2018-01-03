@@ -45,19 +45,19 @@ def generate_place_dashboard(id_name_pairs, place_template, title, tags):
 
 	place['title'] = title
 	place['tags'] = tags
-	place['rows'][0]['panels'][0]['targets'][0]['target'] = "alias(sumSeries(freifunk.nodes.{%s}.clients), 'Nutzer')" % (id_str)
+	place['rows'][0]['panels'][0]['targets'][0]['target'] = "alias(sumSeries(freifunk.node.{%s}.*.clients.total), 'Nutzer')" % (id_str)
 
 	place['rows'][0]['panels'][1]['targets'] = []
 	for p in id_name_pairs:
 		target = {
 			"refId": p['id'],
-			"target": "alias(freifunk.nodes.%s.clients, '%s')" % (p['id'], p['name'])
+			"target": "alias(sumSeries(freifunk.node.%s.*.clients.total), '%s')" % (p['id'], p['name'])
 		}
 		place['rows'][0]['panels'][1]['targets'].append(target)
 
-	place['rows'][0]['panels'][2]['targets'][0]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{%s}.traffic.rx.bytes)), 'Download')" % (id_str)
-	place['rows'][0]['panels'][2]['targets'][1]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{%s}.traffic.tx.bytes)), 'Upload')" % (id_str)
-	place['rows'][0]['panels'][2]['targets'][2]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{%s}.traffic.forward.bytes)), 'Mesh')" % (id_str)
+	place['rows'][0]['panels'][2]['targets'][0]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.node.{%s}.*.traffic.rx.bytes)), 'Download')" % (id_str)
+	place['rows'][0]['panels'][2]['targets'][1]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.node.{%s}.*.traffic.tx.bytes)), 'Upload')" % (id_str)
+	place['rows'][0]['panels'][2]['targets'][2]['target'] = "alias(sumSeries(nonNegativeDerivative(freifunk.node.{%s}.*.traffic.forward.bytes)), 'Mesh')" % (id_str)
 
 	return place
 

@@ -48,7 +48,7 @@
         "multi": false,
         "name": "node",
         "options": [],
-        "query": "freifunk.nodes.*",
+        "query": "freifunk.node.*",
         "refresh": 1,
         "regex": "",
         "type": "query",
@@ -121,19 +121,19 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.nodes.$node.traffic.{rx,mgmt_rx}.bytes), 8)), 'rx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{rx,mgmt_rx}.bytes), 8)), 'rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.nodes.$node.traffic.{tx,mgmt_tx}.bytes), 8)), 'tx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{tx,mgmt_tx}.bytes), 8)), 'tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(scaleToSeconds(nonNegativeDerivative(freifunk.nodes.$node.traffic.forward.bytes), 8), 'forward')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes), 8)), 'forward')",
               "textEditor": false
             }
           ],

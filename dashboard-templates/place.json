@@ -94,7 +94,7 @@
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(sumSeries(freifunk.nodes.{TODO}.clients), 'Nutzer')",
+              "target": "alias(sumSeries(freifunk.node.{TODO}.*.clients.total), 'Nutzer')",
               "textEditor": false
             }
           ],
@@ -171,7 +171,7 @@
           "targets": [
             {
               "refId": "513f93f1509f4f049f0e4a9b0a7c893c",
-              "target": "alias(freifunk.nodes.TODO.clients, 'TODO')"
+              "target": "alias(freifunk.node.TODO.*.clients.total, 'TODO')"
             }
           ],
           "timeFrom": null,
@@ -246,17 +246,17 @@
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{TODO}.traffic.rx.bytes)), 'Download')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.{TODO}.*.traffic.rx.bytes)), 'Download')",
               "textEditor": false
             },
             {
               "refId": "F",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{TODO}.traffic.tx.bytes)), 'Upload')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.{TODO}.*.traffic.tx.bytes)), 'Upload')",
               "textEditor": false
             },
             {
               "refId": "I",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.nodes.{TODO}.traffic.forward.bytes)), 'Mesh')",
+              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.{TODO}.*.traffic.forward.bytes)), 'Mesh')",
               "textEditor": false
             }
           ],
