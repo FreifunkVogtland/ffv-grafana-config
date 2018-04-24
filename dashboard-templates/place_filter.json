@@ -342,13 +342,5 @@
 			"place",
 			"event"
 		]
-	},
-	"SAD 18": {
-		"regex": "^PL-(SchauAufDesign\\d|FFV-Stand-SAD18)",
-		"filename": "sad-18.json",
-		"tags": [
-			"place",
-			"event"
-		]
 	}
 }
