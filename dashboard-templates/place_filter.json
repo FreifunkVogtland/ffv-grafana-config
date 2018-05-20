@@ -112,7 +112,7 @@
 		]
 	},
 	"Limbach": {
-		"regex": "^LIM-.*",
+		"regex": "^L-.*",
 		"filename": "limbach.json",
 		"tags": [
 			"place",
