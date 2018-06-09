@@ -2,6 +2,7 @@
 	"Adorf": {
 		"regex": "^A-.*",
 		"filename": "adorf.json",
+		"domain_code": "ffv_a",
 		"tags": [
 			"place",
 			"municipality"
@@ -10,6 +11,7 @@
 	"Auerbach": {
 		"regex": "^AE-.*",
 		"filename": "auerbach.json",
+		"domain_code": "ffv_ae",
 		"tags": [
 			"place",
 			"municipality"
@@ -18,6 +20,7 @@
 	"Bad Brambach": {
 		"regex": "^BB-.*",
 		"filename": "bad-brambach.json",
+		"domain_code": "ffv_bb",
 		"tags": [
 			"place",
 			"municipality"
@@ -26,6 +29,7 @@
 	"Bad Elster": {
 		"regex": "^BE-.*",
 		"filename": "bad-elster.json",
+		"domain_code": "ffv_be",
 		"tags": [
 			"place",
 			"municipality"
@@ -34,6 +38,7 @@
 	"Bergen": {
 		"regex": "^B-.*",
 		"filename": "bergen.json",
+		"domain_code": "ffv_b",
 		"tags": [
 			"place",
 			"municipality"
@@ -42,6 +47,7 @@
 	"Bösenbrunn": {
 		"regex": "^BOE-.*",
 		"filename": "bösenbrunn.json",
+		"domain_code": "ffv_boe",
 		"tags": [
 			"place",
 			"municipality"
@@ -50,6 +56,7 @@
 	"Eichigt": {
 		"regex": "^EIC-.*",
 		"filename": "eichigt.json",
+		"domain_code": "ffv_eic",
 		"tags": [
 			"place",
 			"municipality"
@@ -58,6 +65,7 @@
 	"Ellefeld": {
 		"regex": "^ELL-.*",
 		"filename": "ellefeld.json",
+		"domain_code": "ffv_ell",
 		"tags": [
 			"place",
 			"municipality"
@@ -66,6 +74,7 @@
 	"Elsterberg": {
 		"regex": "^ELS-.*",
 		"filename": "elsterberg.json",
+		"domain_code": "ffv_els",
 		"tags": [
 			"place",
 			"municipality"
@@ -74,6 +83,7 @@
 	"Falkenstein": {
 		"regex": "^FST-.*",
 		"filename": "falkenstein.json",
+		"domain_code": "ffv_fst",
 		"tags": [
 			"place",
 			"municipality"
@@ -82,6 +92,7 @@
 	"Grünbach": {
 		"regex": "^GB-.*",
 		"filename": "gruenbach.json",
+		"domain_code": "ffv_gb",
 		"tags": [
 			"place",
 			"municipality"
@@ -90,6 +101,7 @@
 	"Heinsdorfergrund": {
 		"regex": "^HDG-.*",
 		"filename": "heinsdorfergrund.json",
+		"domain_code": "ffv_hdg",
 		"tags": [
 			"place",
 			"municipality"
@@ -98,6 +110,7 @@
 	"Klingenthal": {
 		"regex": "^K-.*",
 		"filename": "klingenthal.json",
+		"domain_code": "ffv_k",
 		"tags": [
 			"place",
 			"municipality"
@@ -106,6 +119,7 @@
 	"Lengenfeld": {
 		"regex": "^LE-.*",
 		"filename": "lengenfeld.json",
+		"domain_code": "ffv_le",
 		"tags": [
 			"place",
 			"municipality"
@@ -114,6 +128,7 @@
 	"Limbach": {
 		"regex": "^L-.*",
 		"filename": "limbach.json",
+		"domain_code": "ffv_l",
 		"tags": [
 			"place",
 			"municipality"
@@ -122,6 +137,7 @@
 	"Markneukirchen": {
 		"regex": "^MKN-.*",
 		"filename": "markneukirchen.json",
+		"domain_code": "ffv_mkn",
 		"tags": [
 			"place",
 			"municipality"
@@ -130,6 +146,7 @@
 	"Mühlental": {
 		"regex": "^MTL-.*",
 		"filename": "muehlental.json",
+		"domain_code": "ffv_mtl",
 		"tags": [
 			"place",
 			"municipality"
@@ -138,6 +155,7 @@
 	"Muldenhammer": {
 		"regex": "^MH-.*",
 		"filename": "muldenhammer.json",
+		"domain_code": "ffv_mh",
 		"tags": [
 			"place",
 			"municipality"
@@ -146,6 +164,7 @@
 	"Netzschkau": {
 		"regex": "^N-.*",
 		"filename": "netzschkau.json",
+		"domain_code": "ffv_n",
 		"tags": [
 			"place",
 			"municipality"
@@ -154,6 +173,7 @@
 	"Neuensalz": {
 		"regex": "^NSZ-.*",
 		"filename": "neuensalz.json",
+		"domain_code": "ffv_nsz",
 		"tags": [
 			"place",
 			"municipality"
@@ -162,6 +182,7 @@
 	"Neumark": {
 		"regex": "^NMK-.*",
 		"filename": "neumark.json",
+		"domain_code": "ffv_nmk",
 		"tags": [
 			"place",
 			"municipality"
@@ -170,6 +191,7 @@
 	"Neustadt": {
 		"regex": "^NST-.*",
 		"filename": "neustadt.json",
+		"domain_code": "ffv_nst",
 		"tags": [
 			"place",
 			"municipality"
@@ -178,6 +200,7 @@
 	"Oelsnitz": {
 		"regex": "^OEL-.*",
 		"filename": "oelsnitz.json",
+		"domain_code": "ffv_oel",
 		"tags": [
 			"place",
 			"municipality"
@@ -186,6 +209,7 @@
 	"Pausa-Mühltroff": {
 		"regex": "^PMF-.*",
 		"filename": "pausa-muehltroff.json",
+		"domain_code": "ffv_pmf",
 		"tags": [
 			"place",
 			"municipality"
@@ -194,6 +218,7 @@
 	"Plauen": {
 		"regex": "^PL-.*",
 		"filename": "plauen.json",
+		"domain_code": "ffv_pl",
 		"tags": [
 			"place",
 			"municipality"
@@ -202,6 +227,7 @@
 	"Pöhl": {
 		"regex": "^POE-.*",
 		"filename": "poehl.json",
+		"domain_code": "ffv_poe",
 		"tags": [
 			"place",
 			"municipality"
@@ -210,6 +236,7 @@
 	"Reichenbach": {
 		"regex": "^RC-.*",
 		"filename": "reichenbach.json",
+		"domain_code": "ffv_rc",
 		"tags": [
 			"place",
 			"municipality"
@@ -218,6 +245,7 @@
 	"Rodewisch": {
 		"regex": "^RDW-.*",
 		"filename": "rodewisch.json",
+		"domain_code": "ffv_rdw",
 		"tags": [
 			"place",
 			"municipality"
@@ -234,6 +262,7 @@
 	"Schöneck": {
 		"regex": "^S-.*",
 		"filename": "schoeneck.json",
+		"domain_code": "ffv_s",
 		"tags": [
 			"place",
 			"municipality"
@@ -242,6 +271,7 @@
 	"Steinberg": {
 		"regex": "^SBG-.*",
 		"filename": "steinberg.json",
+		"domain_code": "ffv_sbg",
 		"tags": [
 			"place",
 			"municipality"
@@ -250,6 +280,7 @@
 	"Theuma": {
 		"regex": "^T-.*",
 		"filename": "theuma.json",
+		"domain_code": "ffv_t",
 		"tags": [
 			"place",
 			"municipality"
@@ -258,6 +289,7 @@
 	"Tirpersdorf": {
 		"regex": "^TDF-.*",
 		"filename": "tirpersdorf.json",
+		"domain_code": "ffv_tdf",
 		"tags": [
 			"place",
 			"municipality"
@@ -266,6 +298,7 @@
 	"Treuen": {
 		"regex": "^TR-.*",
 		"filename": "treuen.json",
+		"domain_code": "ffv_tr",
 		"tags": [
 			"place",
 			"municipality"
@@ -274,6 +307,7 @@
 	"Triebel": {
 		"regex": "^TRI-.*",
 		"filename": "triebel.json",
+		"domain_code": "ffv_tri",
 		"tags": [
 			"place",
 			"municipality"
@@ -282,6 +316,7 @@
 	"Weischlitz": {
 		"regex": "^WEI-.*",
 		"filename": "weischlitz.json",
+		"domain_code": "ffv_wei",
 		"tags": [
 			"place",
 			"municipality"
@@ -290,6 +325,7 @@
 	"Werda": {
 		"regex": "^WER-.*",
 		"filename": "werda.json",
+		"domain_code": "ffv_wer",
 		"tags": [
 			"place",
 			"municipality"
