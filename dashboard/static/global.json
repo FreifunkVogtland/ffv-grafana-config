@@ -425,7 +425,7 @@
             "max": true,
             "min": true,
             "show": true,
-            "total": true,
+            "total": false,
             "values": true
           },
           "lines": true,
