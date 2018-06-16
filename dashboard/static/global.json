@@ -189,49 +189,49 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.rx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'rx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.rx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'rx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'tx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'tx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "C",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_rx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'mgmt_rx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_rx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'mgmt_rx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'mgmt_tx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.mgmt_tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'mgmt_tx')",
               "textEditor": true
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.forward.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'forward')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.forward.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'forward')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "F",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.{02ba7adf0100,02ba7adf0300,02ba7adf0400,02ba7adf0500,02ba7adf0600}.*.traffic.tx.bytes)), 'tx nur vpn')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.{02ba7adf0100,02ba7adf0300,02ba7adf0400,02ba7adf0500,02ba7adf0600}.*.traffic.tx.bytes), 8)), 'tx nur vpn')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "H",
-              "target": "alias(sumSeries(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600'))), 'tx ohne vpn')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(exclude(freifunk.node.*.*.traffic.tx.bytes, '02ba7adf0100|02ba7adf0300|02ba7adf0400|02ba7adf0500|02ba7adf0600')), 8)), 'tx ohne vpn')",
               "textEditor": true
             },
             {
               "hide": true,
               "refId": "I",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.*.*.traffic.tx.bytes)), 'tx gesamt')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.*.*.traffic.tx.bytes), 8)), 'tx gesamt')",
               "textEditor": true
             }
           ],
@@ -253,7 +253,7 @@
           },
           "yaxes": [
             {
-              "format": "bytes",
+              "format": "bps",
               "label": null,
               "logBase": 1,
               "max": null,
