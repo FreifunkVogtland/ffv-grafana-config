@@ -373,11 +373,11 @@
           "targets": [
             {
               "refId": "A",
-              "target": "sumSeries(freifunk.node.$node.*.memory_usage)"
+              "target": "divideSeries(sumSeries(freifunk.node.$node.*.memory.free), sumSeries(freifunk.node.$node.*.memory.total))"
             }
           ],
           "thresholds": "",
-          "title": "Memory",
+          "title": "Free Memory",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [

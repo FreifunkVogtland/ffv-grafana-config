@@ -324,7 +324,7 @@
           "decimals": 0,
           "editable": true,
           "error": false,
-          "format": "percentunit",
+          "format": "kbytes",
           "gauge": {
             "maxValue": 100,
             "minValue": 0,
@@ -375,7 +375,7 @@
             }
           ],
           "thresholds": "",
-          "title": "Memory",
+          "title": "Free Memory",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [
