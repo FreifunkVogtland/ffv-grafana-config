@@ -452,12 +452,21 @@
               "textEditor": false
             },
             {
-              "refId": "E",
+              "refId": "C",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0100.*.traffic.forward.bytes), 8)), 'ffv-vpn01_forward')",
+              "textEditor": false
+            },
+            {
+              "refId": "D",
               "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0300.*.traffic.rx.bytes), 8)), 'ffv-vpn03_rx')"
             },
             {
-              "refId": "F",
+              "refId": "E",
               "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0300.*.traffic.tx.bytes), 8)), 'ffv-vpn03_tx')"
+            },
+            {
+              "refId": "F",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0300.*.traffic.forward.bytes), 8)), 'ffv-vpn03_forward')"
             },
             {
               "refId": "G",
@@ -469,19 +478,31 @@
             },
             {
               "refId": "I",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0500.*.traffic.rx.bytes), 8)), 'ffv-vpn05_rx')"
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0400.*.traffic.forward.bytes), 8)), 'ffv-vpn04_forward')"
             },
             {
               "refId": "J",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0500.*.traffic.tx.bytes), 8)), 'ffv-vpn05_tx')"
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0500.*.traffic.rx.bytes), 8)), 'ffv-vpn05_rx')"
             },
             {
               "refId": "K",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0600.*.traffic.rx.bytes), 8)), 'ffv-vpn06_rx')"
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0500.*.traffic.tx.bytes), 8)), 'ffv-vpn05_tx')"
             },
             {
               "refId": "L",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0500.*.traffic.forward.bytes), 8)), 'ffv-vpn05_forward')"
+            },
+            {
+              "refId": "M",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0600.*.traffic.rx.bytes), 8)), 'ffv-vpn06_rx')"
+            },
+            {
+              "refId": "N",
               "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0600.*.traffic.tx.bytes), 8)), 'ffv-vpn06_tx')"
+            },
+            {
+              "refId": "O",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.02ba7adf0600.*.traffic.forward.bytes), 8)), 'ffv-vpn06_forward')"
             }
           ],
           "timeFrom": "7d",
