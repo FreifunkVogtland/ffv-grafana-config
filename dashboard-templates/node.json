@@ -250,7 +250,7 @@
           "datasource": "local",
           "editable": true,
           "error": false,
-          "format": "none",
+          "format": "percentunit",
           "gauge": {
             "maxValue": 100,
             "minValue": 0,
@@ -297,7 +297,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "sumSeries(freifunk.node.$node.*.loadavg)"
+              "target": "sumSeries(freifunk.node.$node.*.load)"
             }
           ],
           "thresholds": "",
