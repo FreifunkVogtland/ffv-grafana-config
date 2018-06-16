@@ -221,7 +221,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "sumSeries(freifunk.node.$node.*.uptime)"
+              "target": "sumSeries(freifunk.node.$node.*.time.up)"
             }
           ],
           "thresholds": "",
