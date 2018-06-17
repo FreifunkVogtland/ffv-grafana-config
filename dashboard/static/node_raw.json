@@ -586,6 +586,85 @@
           "links": []
         },
         {
+          "type": "singlestat",
+          "title": "Frequency 2.4GHz",
+          "gridPos": {
+            "x": 8,
+            "y": 16,
+            "w": 4,
+            "h": 9
+          },
+          "id": 13,
+          "datasource": null,
+          "targets": [
+            {
+              "target": "alias(scale(sumSeries(freifunk.node.$node.*.airtime11g.frequency), 1000000), 'Frequency')",
+              "refId": "A",
+              "textEditor": true
+            }
+          ],
+          "links": [],
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "hertz",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "tableColumn": ""
+        },
+        {
           "type": "graph",
           "title": "Airtime 5GHz",
           "gridPos": {
@@ -680,6 +759,85 @@
           "seriesOverrides": [],
           "thresholds": [],
           "links": []
+        },
+        {
+          "type": "singlestat",
+          "title": "Frequency 5GHz",
+          "gridPos": {
+            "x": 8,
+            "y": 16,
+            "w": 4,
+            "h": 9
+          },
+          "id": 14,
+          "datasource": null,
+          "targets": [
+            {
+              "target": "alias(scale(sumSeries(freifunk.node.$node.*.airtime11a.frequency), 1000000), 'Frequency')",
+              "refId": "A",
+              "textEditor": true
+            }
+          ],
+          "links": [],
+          "maxDataPoints": 100,
+          "interval": null,
+          "cacheTimeout": null,
+          "format": "hertz",
+          "prefix": "",
+          "postfix": "",
+          "nullText": null,
+          "valueMaps": [
+            {
+              "value": "null",
+              "op": "=",
+              "text": "N/A"
+            }
+          ],
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "rangeMaps": [
+            {
+              "from": "null",
+              "to": "null",
+              "text": "N/A"
+            }
+          ],
+          "mappingType": 1,
+          "nullPointMode": "connected",
+          "valueName": "avg",
+          "prefixFontSize": "50%",
+          "valueFontSize": "80%",
+          "postfixFontSize": "50%",
+          "thresholds": "",
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a"
+          ],
+          "sparkline": {
+            "show": true,
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "fillColor": "rgba(31, 118, 189, 0.18)"
+          },
+          "gauge": {
+            "show": false,
+            "minValue": 0,
+            "maxValue": 100,
+            "thresholdMarkers": true,
+            "thresholdLabels": false
+          },
+          "tableColumn": ""
         }
       ],
       "showTitle": false,
