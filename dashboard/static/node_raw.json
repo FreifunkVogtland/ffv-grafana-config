@@ -862,6 +862,108 @@
             "thresholdLabels": false
           },
           "tableColumn": ""
+        },
+        {
+          "type": "graph",
+          "title": "Neighbors",
+          "gridPos": {
+            "x": 8,
+            "y": 16,
+            "w": 12,
+            "h": 9
+          },
+          "id": 16,
+          "datasource": null,
+          "targets": [
+            {
+              "target": "alias(sumSeries(freifunk.node.$node.*.neighbours.total), 'Total')",
+              "refId": "A",
+              "textEditor": true,
+              "refCount": 0
+            },
+            {
+              "refId": "B",
+              "target": "alias(sumSeries(freifunk.node.$node.*.neighbours.vpn), 'VPN')",
+              "textEditor": true,
+              "refCount": 0
+            },
+            {
+              "refId": "C",
+              "target": "alias(sumSeries(freifunk.node.$node.*.neighbours.batadv), 'batman-adv')",
+              "textEditor": true,
+              "refCount": 0
+            },
+            {
+              "refId": "D",
+              "target": "alias(sumSeries(freifunk.node.$node.*.neighbours.lldp), 'LLDP')",
+              "textEditor": true,
+              "refCount": 0
+            }
+          ],
+          "renderer": "flot",
+          "yaxes": [
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": "0",
+              "max": null,
+              "format": "short"
+            },
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": null,
+              "max": null,
+              "format": "short"
+            }
+          ],
+          "xaxis": {
+            "show": true,
+            "mode": "time",
+            "name": null,
+            "values": [],
+            "buckets": null
+          },
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          },
+          "lines": true,
+          "fill": 1,
+          "linewidth": 1,
+          "dashes": false,
+          "dashLength": 10,
+          "spaceLength": 10,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": true,
+            "values": true,
+            "min": true,
+            "max": true,
+            "current": true,
+            "total": false,
+            "avg": true,
+            "alignAsTable": true
+          },
+          "nullPointMode": "null",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "individual",
+            "shared": true,
+            "sort": 0
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "aliasColors": {},
+          "seriesOverrides": [],
+          "thresholds": [],
+          "links": []
         }
       ],
       "showTitle": false,
