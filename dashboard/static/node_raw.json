@@ -488,6 +488,198 @@
             }
           ],
           "thresholds": []
+        },
+        {
+          "type": "graph",
+          "title": "Airtime 2.4GHz",
+          "gridPos": {
+            "x": 0,
+            "y": 23,
+            "w": 12,
+            "h": 9
+          },
+          "id": 10,
+          "datasource": null,
+          "targets": [
+            {
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11g.chan_util), 'Channel Utilization')",
+              "refId": "A",
+              "textEditor": false,
+              "refCount": 0
+            },
+            {
+              "refId": "B",
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11g.rx_util), 'RX Utilization')",
+              "textEditor": false,
+              "refCount": 0
+            },
+            {
+              "refId": "C",
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11g.tx_util), 'TX Utilization')",
+              "refCount": 0,
+              "textEditor": false
+            }
+          ],
+          "renderer": "flot",
+          "yaxes": [
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": null,
+              "max": null,
+              "format": "percent"
+            },
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": null,
+              "max": null,
+              "format": "short"
+            }
+          ],
+          "xaxis": {
+            "show": true,
+            "mode": "time",
+            "name": null,
+            "values": [],
+            "buckets": null
+          },
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          },
+          "lines": true,
+          "fill": 1,
+          "linewidth": 1,
+          "dashes": false,
+          "dashLength": 10,
+          "spaceLength": 10,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": true,
+            "values": true,
+            "min": true,
+            "max": true,
+            "current": true,
+            "total": false,
+            "avg": true,
+            "alignAsTable": true
+          },
+          "nullPointMode": "null",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "individual",
+            "shared": true,
+            "sort": 0
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "aliasColors": {},
+          "seriesOverrides": [],
+          "thresholds": [],
+          "links": []
+        },
+        {
+          "type": "graph",
+          "title": "Airtime 5GHz",
+          "gridPos": {
+            "x": 0,
+            "y": 23,
+            "w": 12,
+            "h": 9
+          },
+          "id": 11,
+          "datasource": null,
+          "targets": [
+            {
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11a.chan_util), 'Channel Utilization')",
+              "refId": "A",
+              "textEditor": false,
+              "refCount": 0
+            },
+            {
+              "refId": "B",
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11a.rx_util), 'RX Utilization')",
+              "textEditor": false,
+              "refCount": 0
+            },
+            {
+              "refId": "C",
+              "target": "alias(sumSeries(freifunk.node.$node.*.airtime11a.tx_util), 'TX Utilization')",
+              "refCount": 0,
+              "textEditor": false
+            }
+          ],
+          "renderer": "flot",
+          "yaxes": [
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": null,
+              "max": null,
+              "format": "percent"
+            },
+            {
+              "label": null,
+              "show": true,
+              "logBase": 1,
+              "min": null,
+              "max": null,
+              "format": "short"
+            }
+          ],
+          "xaxis": {
+            "show": true,
+            "mode": "time",
+            "name": null,
+            "values": [],
+            "buckets": null
+          },
+          "yaxis": {
+            "align": false,
+            "alignLevel": null
+          },
+          "lines": true,
+          "fill": 1,
+          "linewidth": 1,
+          "dashes": false,
+          "dashLength": 10,
+          "spaceLength": 10,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": true,
+            "values": true,
+            "min": true,
+            "max": true,
+            "current": true,
+            "total": false,
+            "avg": true,
+            "alignAsTable": true
+          },
+          "nullPointMode": "null",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "individual",
+            "shared": true,
+            "sort": 0
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "aliasColors": {},
+          "seriesOverrides": [],
+          "thresholds": [],
+          "links": []
         }
       ],
       "showTitle": false,
