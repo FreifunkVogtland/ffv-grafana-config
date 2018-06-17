@@ -407,7 +407,7 @@
             "min": false,
             "rightSide": false,
             "show": true,
-            "total": true,
+            "total": false,
             "values": true
           },
           "lines": true,
@@ -427,31 +427,31 @@
             {
               "hide": false,
               "refId": "A",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes)), 'rx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.rx.bytes), 8)), 'rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "B",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes)), 'tx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.tx.bytes), 8)), 'tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "C",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_rx.bytes)), 'mgmt_rx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_rx.bytes), 8)), 'mgmt_rx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "D",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_tx.bytes)), 'mgmt_tx')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.mgmt_tx.bytes), 8)), 'mgmt_tx')",
               "textEditor": false
             },
             {
               "hide": false,
               "refId": "E",
-              "target": "alias(sumSeries(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes)), 'forward')",
+              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes), 8)), 'forward')",
               "textEditor": false
             }
           ],
@@ -473,7 +473,7 @@
           },
           "yaxes": [
             {
-              "format": "bytes",
+              "format": "bps",
               "label": null,
               "logBase": 1,
               "max": null,
