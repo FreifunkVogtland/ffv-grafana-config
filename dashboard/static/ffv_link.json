@@ -1,0 +1,1094 @@
+{
+    "__inputs": [
+        {
+            "name": "DS_FFV",
+            "label": "ffv",
+            "description": "",
+            "type": "datasource",
+            "pluginId": "influxdb",
+            "pluginName": "InfluxDB"
+        },
+        {
+            "name": "VAR_SAVEINTERVAL",
+            "type": "constant",
+            "label": "SavedInterval",
+            "value": "60",
+            "description": ""
+        }
+    ],
+    "__requires": [
+        {
+            "type": "grafana",
+            "id": "grafana",
+            "name": "Grafana",
+            "version": "5.2.1"
+        },
+        {
+            "type": "panel",
+            "id": "graph",
+            "name": "Graph",
+            "version": "5.0.0"
+        },
+        {
+            "type": "datasource",
+            "id": "influxdb",
+            "name": "InfluxDB",
+            "version": "5.0.0"
+        },
+        {
+            "type": "panel",
+            "id": "table",
+            "name": "Table",
+            "version": "5.0.0"
+        }
+    ],
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": "-- Grafana --",
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 2,
+    "id": null,
+    "iteration": 1530304068480,
+    "links": [
+        {
+            "icon": "bolt",
+            "includeVars": false,
+            "tags": [],
+            "targetBlank": true,
+            "title": "Map",
+            "tooltip": "Meshviewer",
+            "type": "link",
+            "url": "https://map.ffhb.de/#/en/map/$node-$nodetolink"
+        }
+    ],
+    "panels": [
+        {
+            "columns": [],
+            "datasource": "ffv",
+            "description": "",
+            "fontSize": "100%",
+            "gridPos": {
+                "h": 4,
+                "w": 11,
+                "x": 0,
+                "y": 0
+            },
+            "id": 11,
+            "links": [],
+            "pageSize": null,
+            "scroll": true,
+            "showHeader": true,
+            "sort": {
+                "col": 2,
+                "desc": false
+            },
+            "styles": [
+                {
+                    "alias": "Time",
+                    "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                    "pattern": "Time",
+                    "type": "hidden"
+                },
+                {
+                    "alias": "",
+                    "colorMode": null,
+                    "colors": [
+                        "rgba(245, 54, 54, 0.9)",
+                        "rgba(237, 129, 40, 0.89)",
+                        "rgba(50, 172, 45, 0.97)"
+                    ],
+                    "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                    "decimals": 2,
+                    "link": true,
+                    "linkTargetBlank": true,
+                    "linkTooltip": "Node on map",
+                    "linkUrl": "https://map.bremen.freifunk.net/#/${__cell}",
+                    "mappingType": 1,
+                    "pattern": "NodeIDs",
+                    "thresholds": [],
+                    "type": "string",
+                    "unit": "short"
+                },
+                {
+                    "alias": "",
+                    "colorMode": null,
+                    "colors": [
+                        "rgba(245, 54, 54, 0.9)",
+                        "rgba(237, 129, 40, 0.89)",
+                        "rgba(50, 172, 45, 0.97)"
+                    ],
+                    "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                    "decimals": 0,
+                    "mappingType": 1,
+                    "pattern": "Clients",
+                    "thresholds": [],
+                    "type": "number",
+                    "unit": "short"
+                },
+                {
+                    "alias": "Knoten-Namen",
+                    "colorMode": null,
+                    "colors": [
+                        "rgba(245, 54, 54, 0.9)",
+                        "rgba(237, 129, 40, 0.89)",
+                        "rgba(50, 172, 45, 0.97)"
+                    ],
+                    "dateFormat": "YYYY-MM-DD HH:mm:ss",
+                    "decimals": 2,
+                    "link": true,
+                    "linkTargetBlank": true,
+                    "linkTooltip": "Node on map",
+                    "linkUrl": "https://map.bremen.freifunk.net/#/${__cell_2}",
+                    "mappingType": 1,
+                    "pattern": "hostname",
+                    "thresholds": [],
+                    "type": "string",
+                    "unit": "short"
+                },
+                {
+                    "alias": "",
+                    "colorMode": null,
+                    "colors": [
+                        "rgba(245, 54, 54, 0.9)",
+                        "rgba(237, 129, 40, 0.89)",
+                        "rgba(50, 172, 45, 0.97)"
+                    ],
+                    "decimals": 2,
+                    "pattern": "/.*/",
+                    "thresholds": [],
+                    "type": "number",
+                    "unit": "short"
+                }
+            ],
+            "targets": [
+                {
+                    "alias": "",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "hostname"
+                            ],
+                            "type": "tag"
+                        }
+                    ],
+                    "limit": "1",
+                    "measurement": "node",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "query": "SELECT \"nodeid\" AS \"NodeID\", last(\"clients.total\") AS \"Clients\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/ OR \"nodeid\" =~ /^$nodetolink$/) AND $timeFilter GROUP BY \"hostname\" LIMIT 1",
+                    "rawQuery": false,
+                    "refId": "A",
+                    "resultFormat": "table",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "nodeid"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [
+                                    "NodeIDs"
+                                ],
+                                "type": "alias"
+                            }
+                        ],
+                        [
+                            {
+                                "params": [
+                                    "clients.total"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "last"
+                            },
+                            {
+                                "params": [
+                                    "Clients"
+                                ],
+                                "type": "alias"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "nodeid",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        },
+                        {
+                            "condition": "OR",
+                            "key": "nodeid",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        }
+                    ]
+                }
+            ],
+            "title": "Knoten",
+            "transform": "table",
+            "transparent": true,
+            "type": "table"
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "ffv",
+            "description": "",
+            "fill": 1,
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "id": 7,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+                {
+                    "alias": "Min",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "link",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "C",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "tq"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "min"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "target.id",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "source.id",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        },
+                        {
+                            "condition": "OR",
+                            "key": "source.id",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "target.id",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        }
+                    ]
+                },
+                {
+                    "alias": "Max",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "link",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "A",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "tq"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "max"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "target.id",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "source.id",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        },
+                        {
+                            "condition": "OR",
+                            "key": "source.id",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "target.id",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        }
+                    ]
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Transmit quality between nodes [[node]] and [[nodetolink]]",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "transparent": true,
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [
+                {
+                    "format": "percent",
+                    "label": "",
+                    "logBase": 1,
+                    "max": "110",
+                    "min": "0",
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "ffv",
+            "description": "",
+            "fill": 1,
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 0,
+                "y": 4
+            },
+            "id": 8,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+                {
+                    "alias": "[[source_addr]]",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "link",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "C",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "tq"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "source.addr",
+                            "operator": "=~",
+                            "value": "/^$source_addr$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "target.addr",
+                            "operator": "=~",
+                            "value": "/^$target_addr$/"
+                        }
+                    ]
+                },
+                {
+                    "alias": "[[target_addr]]",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "link",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "A",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "tq"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "source.addr",
+                            "operator": "=~",
+                            "value": "/^$target_addr$/"
+                        },
+                        {
+                            "condition": "AND",
+                            "key": "target.addr",
+                            "operator": "=~",
+                            "value": "/^$source_addr$/"
+                        }
+                    ]
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Transmit quality between interfaces [[source_addr]] and [[target_addr]]",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "transparent": true,
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [
+                {
+                    "format": "percent",
+                    "label": "",
+                    "logBase": 1,
+                    "max": "110",
+                    "min": "0",
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "ffv",
+            "description": "",
+            "fill": 1,
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 6
+            },
+            "id": 12,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+                {
+                    "alias": "$col",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "node",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "C",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "airtime11g.chan_util"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            },
+                            {
+                                "params": [
+                                    "Airtime 2,4GHz"
+                                ],
+                                "type": "alias"
+                            }
+                        ],
+                        [
+                            {
+                                "params": [
+                                    "airtime11a.chan_util"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            },
+                            {
+                                "params": [
+                                    "Airtime 5GHz"
+                                ],
+                                "type": "alias"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "nodeid",
+                            "operator": "=~",
+                            "value": "/^$node$/"
+                        }
+                    ]
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Airtime on [[node]]",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "transparent": true,
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [
+                {
+                    "format": "percent",
+                    "label": "",
+                    "logBase": 1,
+                    "max": "110",
+                    "min": "0",
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        },
+        {
+            "aliasColors": {},
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": "ffv",
+            "description": "",
+            "fill": 1,
+            "gridPos": {
+                "h": 6,
+                "w": 12,
+                "x": 12,
+                "y": 12
+            },
+            "id": 13,
+            "legend": {
+                "avg": false,
+                "current": false,
+                "max": false,
+                "min": false,
+                "show": true,
+                "total": false,
+                "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "seriesOverrides": [],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+                {
+                    "alias": "$col",
+                    "dsType": "influxdb",
+                    "groupBy": [
+                        {
+                            "params": [
+                                "$__interval"
+                            ],
+                            "type": "time"
+                        },
+                        {
+                            "params": [
+                                "null"
+                            ],
+                            "type": "fill"
+                        }
+                    ],
+                    "measurement": "node",
+                    "orderByTime": "ASC",
+                    "policy": "default",
+                    "refId": "A",
+                    "resultFormat": "time_series",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "airtime11g.chan_util"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            },
+                            {
+                                "params": [
+                                    "Airtime 2,4GHz"
+                                ],
+                                "type": "alias"
+                            }
+                        ],
+                        [
+                            {
+                                "params": [
+                                    "airtime11a.chan_util"
+                                ],
+                                "type": "field"
+                            },
+                            {
+                                "params": [],
+                                "type": "mean"
+                            },
+                            {
+                                "params": [
+                                    "Airtime 5GHz"
+                                ],
+                                "type": "alias"
+                            }
+                        ]
+                    ],
+                    "tags": [
+                        {
+                            "key": "nodeid",
+                            "operator": "=~",
+                            "value": "/^$nodetolink$/"
+                        }
+                    ]
+                }
+            ],
+            "thresholds": [],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Airtime on [[nodetolink]]",
+            "tooltip": {
+                "shared": true,
+                "sort": 0,
+                "value_type": "individual"
+            },
+            "transparent": true,
+            "type": "graph",
+            "xaxis": {
+                "buckets": null,
+                "mode": "time",
+                "name": null,
+                "show": true,
+                "values": []
+            },
+            "yaxes": [
+                {
+                    "format": "percent",
+                    "label": "",
+                    "logBase": 1,
+                    "max": "110",
+                    "min": "0",
+                    "show": true
+                },
+                {
+                    "format": "short",
+                    "label": null,
+                    "logBase": 1,
+                    "max": null,
+                    "min": null,
+                    "show": true
+                }
+            ],
+            "yaxis": {
+                "align": false,
+                "alignLevel": null
+            }
+        }
+    ],
+    "refresh": "1m",
+    "schemaVersion": 16,
+    "style": "dark",
+    "tags": [
+        "nodes",
+        "meshviewer"
+    ],
+    "templating": {
+        "list": [
+            {
+                "allFormat": "regex wildcard",
+                "allValue": "*",
+                "current": {},
+                "datasource": "ffv",
+                "hide": 0,
+                "includeAll": true,
+                "label": null,
+                "multi": false,
+                "multiFormat": "regex values",
+                "name": "node",
+                "options": [],
+                "query": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\"",
+                "refresh": 1,
+                "regex": "",
+                "sort": 0,
+                "tagValuesQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\" WHERE \"hostname\" = '$tag'",
+                "tags": [],
+                "tagsQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"hostname\"",
+                "type": "query",
+                "useTags": false
+            },
+            {
+                "allValue": null,
+                "current": {
+                    "text": "60",
+                    "value": "60"
+                },
+                "hide": 0,
+                "includeAll": false,
+                "label": "Interval yanic (in s)",
+                "multi": false,
+                "name": "saveinterval",
+                "options": [
+                    {
+                        "selected": true,
+                        "text": "60",
+                        "value": "60"
+                    },
+                    {
+                        "selected": false,
+                        "text": "360",
+                        "value": "360"
+                    },
+                    {
+                        "selected": false,
+                        "text": "600",
+                        "value": "600"
+                    },
+                    {
+                        "selected": false,
+                        "text": "3600",
+                        "value": "3600"
+                    }
+                ],
+                "query": "60,360,600,3600",
+                "type": "custom"
+            },
+            {
+                "allFormat": "regex wildcard",
+                "allValue": "(.*)",
+                "current": {},
+                "datasource": "ffv",
+                "hide": 0,
+                "includeAll": false,
+                "label": null,
+                "multi": false,
+                "multiFormat": "regex values",
+                "name": "nodetolink",
+                "options": [],
+                "query": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\"",
+                "refresh": 1,
+                "regex": "",
+                "sort": 0,
+                "tagValuesQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\" WHERE \"hostname\" = '$tag'",
+                "tags": [],
+                "tagsQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"hostname\"",
+                "type": "query",
+                "useTags": true
+            },
+            {
+                "allFormat": "regex wildcard",
+                "allValue": "(.*)",
+                "current": {},
+                "datasource": "ffv",
+                "hide": 0,
+                "includeAll": false,
+                "label": null,
+                "multi": false,
+                "multiFormat": "regex values",
+                "name": "source_addr",
+                "options": [],
+                "query": "SHOW TAG VALUES FROM \"link\" WITH KEY = \"source.addr\"",
+                "refresh": 1,
+                "regex": "",
+                "sort": 0,
+                "tagValuesQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\" WHERE \"hostname\" = '$tag'",
+                "tags": [],
+                "tagsQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"hostname\"",
+                "type": "query",
+                "useTags": true
+            },
+            {
+                "allFormat": "regex wildcard",
+                "allValue": "(.*)",
+                "current": {},
+                "datasource": "ffv",
+                "hide": 0,
+                "includeAll": false,
+                "label": null,
+                "multi": false,
+                "multiFormat": "regex values",
+                "name": "target_addr",
+                "options": [],
+                "query": "SHOW TAG VALUES FROM \"link\" WITH KEY = \"target.addr\"",
+                "refresh": 1,
+                "regex": "",
+                "sort": 0,
+                "tagValuesQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"nodeid\" WHERE \"hostname\" = '$tag'",
+                "tags": [],
+                "tagsQuery": "SHOW TAG VALUES FROM \"node\" WITH KEY = \"hostname\"",
+                "type": "query",
+                "useTags": true
+            }
+        ]
+    },
+    "time": {
+        "from": "now-7d",
+        "to": "now-1m"
+    },
+    "timepicker": {
+        "now": true,
+        "nowDelay": "1m",
+        "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+        ],
+        "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+        ]
+    },
+    "timezone": "browser",
+    "title": "Link",
+    "uid": "ffv_link",
+    "version": 2
+}
