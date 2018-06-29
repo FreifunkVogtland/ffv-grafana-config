@@ -1,382 +1,382 @@
 {
-	"Adorf": {
-		"regex": "^A-.*",
-		"filename": "adorf.json",
-		"domain_code": "ffv_a",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Auerbach": {
-		"regex": "^AE-.*",
-		"filename": "auerbach.json",
-		"domain_code": "ffv_ae",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Bad Brambach": {
-		"regex": "^BB-.*",
-		"filename": "bad-brambach.json",
-		"domain_code": "ffv_bb",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Bad Elster": {
-		"regex": "^BE-.*",
-		"filename": "bad-elster.json",
-		"domain_code": "ffv_be",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Bergen": {
-		"regex": "^B-.*",
-		"filename": "bergen.json",
-		"domain_code": "ffv_b",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Bösenbrunn": {
-		"regex": "^BOE-.*",
-		"filename": "bösenbrunn.json",
-		"domain_code": "ffv_boe",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Eichigt": {
-		"regex": "^EIC-.*",
-		"filename": "eichigt.json",
-		"domain_code": "ffv_eic",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Ellefeld": {
-		"regex": "^ELL-.*",
-		"filename": "ellefeld.json",
-		"domain_code": "ffv_ell",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Elsterberg": {
-		"regex": "^ELS-.*",
-		"filename": "elsterberg.json",
-		"domain_code": "ffv_els",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Falkenstein": {
-		"regex": "^FST-.*",
-		"filename": "falkenstein.json",
-		"domain_code": "ffv_fst",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Grünbach": {
-		"regex": "^GB-.*",
-		"filename": "gruenbach.json",
-		"domain_code": "ffv_gb",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Heinsdorfergrund": {
-		"regex": "^HDG-.*",
-		"filename": "heinsdorfergrund.json",
-		"domain_code": "ffv_hdg",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Klingenthal": {
-		"regex": "^K-.*",
-		"filename": "klingenthal.json",
-		"domain_code": "ffv_k",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Lengenfeld": {
-		"regex": "^LE-.*",
-		"filename": "lengenfeld.json",
-		"domain_code": "ffv_le",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Limbach": {
-		"regex": "^L-.*",
-		"filename": "limbach.json",
-		"domain_code": "ffv_l",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Markneukirchen": {
-		"regex": "^MKN-.*",
-		"filename": "markneukirchen.json",
-		"domain_code": "ffv_mkn",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Mühlental": {
-		"regex": "^MTL-.*",
-		"filename": "muehlental.json",
-		"domain_code": "ffv_mtl",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Muldenhammer": {
-		"regex": "^MH-.*",
-		"filename": "muldenhammer.json",
-		"domain_code": "ffv_mh",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Netzschkau": {
-		"regex": "^N-.*",
-		"filename": "netzschkau.json",
-		"domain_code": "ffv_n",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Neuensalz": {
-		"regex": "^NSZ-.*",
-		"filename": "neuensalz.json",
-		"domain_code": "ffv_nsz",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Neumark": {
-		"regex": "^NMK-.*",
-		"filename": "neumark.json",
-		"domain_code": "ffv_nmk",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Neustadt": {
-		"regex": "^NST-.*",
-		"filename": "neustadt.json",
-		"domain_code": "ffv_nst",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Oelsnitz": {
-		"regex": "^OEL-.*",
-		"filename": "oelsnitz.json",
-		"domain_code": "ffv_oel",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Pausa-Mühltroff": {
-		"regex": "^PMF-.*",
-		"filename": "pausa-muehltroff.json",
-		"domain_code": "ffv_pmf",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Plauen": {
-		"regex": "^PL-.*",
-		"filename": "plauen.json",
-		"domain_code": "ffv_pl",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Pöhl": {
-		"regex": "^POE-.*",
-		"filename": "poehl.json",
-		"domain_code": "ffv_poe",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Reichenbach": {
-		"regex": "^RC-.*",
-		"filename": "reichenbach.json",
-		"domain_code": "ffv_rc",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Rodewisch": {
-		"regex": "^RDW-.*",
-		"filename": "rodewisch.json",
-		"domain_code": "ffv_rdw",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Rosenbach": {
-		"regex": "^RBH-.*",
-		"filename": "rosenbach.json",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Schöneck": {
-		"regex": "^S-.*",
-		"filename": "schoeneck.json",
-		"domain_code": "ffv_s",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Steinberg": {
-		"regex": "^SBG-.*",
-		"filename": "steinberg.json",
-		"domain_code": "ffv_sbg",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Theuma": {
-		"regex": "^T-.*",
-		"filename": "theuma.json",
-		"domain_code": "ffv_t",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Tirpersdorf": {
-		"regex": "^TDF-.*",
-		"filename": "tirpersdorf.json",
-		"domain_code": "ffv_tdf",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Treuen": {
-		"regex": "^TR-.*",
-		"filename": "treuen.json",
-		"domain_code": "ffv_tr",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Triebel": {
-		"regex": "^TRI-.*",
-		"filename": "triebel.json",
-		"domain_code": "ffv_tri",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Weischlitz": {
-		"regex": "^WEI-.*",
-		"filename": "weischlitz.json",
-		"domain_code": "ffv_wei",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"Werda": {
-		"regex": "^WER-.*",
-		"filename": "werda.json",
-		"domain_code": "ffv_wer",
-		"tags": [
-			"place",
-			"municipality"
-		]
-	},
-	"City-Hotel": {
-		"regex": "^PL-Neundorfer23-City-Hotel.*",
-		"filename": "city-hotel.json",
-		"tags": [
-			"place",
-			"venue"
-		]
-	},
-	"Hotel Alexandra": {
-		"regex": "^PL-Bahnhof17-HotelAlexandra.*",
-		"filename": "hotel-alexandra.json",
-		"tags": [
-			"place",
-			"venue"
-		]
-	},
-	"Zum Kerkermeister - Auerbach": {
-		"regex": "^AE-Kirchpl1-Kerkermeister*",
-		"filename": "zum-kerkermeister.json",
-		"tags": [
-			"place",
-			"venue"
-		]
-	},
-	"Parkhotel": {
-		"regex": "^PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)",
-		"filename": "parkhotel.json",
-		"tags": [
-			"place",
-			"venue"
-		]
-	},
-	"PL-Johanniskirche": {
-		"regex": "^PL-Johanniskirche-.*",
-		"filename": "pl_johanniskirche.json",
-		"tags": [
-			"place",
-			"venue"
-		]
-	},
-	"KlangGarten - Kurzfilm- & Musikfestival": {
-		"regex": "^PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)",
-		"filename": "klanggarten.json",
-		"tags": [
-			"place",
-			"event"
-		]
-	}
+    "Adorf": {
+        "domain_code": "ffv_a",
+        "filename": "adorf.json",
+        "regex": "^A-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Auerbach": {
+        "domain_code": "ffv_ae",
+        "filename": "auerbach.json",
+        "regex": "^AE-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Bad Brambach": {
+        "domain_code": "ffv_bb",
+        "filename": "bad-brambach.json",
+        "regex": "^BB-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Bad Elster": {
+        "domain_code": "ffv_be",
+        "filename": "bad-elster.json",
+        "regex": "^BE-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Bergen": {
+        "domain_code": "ffv_b",
+        "filename": "bergen.json",
+        "regex": "^B-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "B\u00f6senbrunn": {
+        "domain_code": "ffv_boe",
+        "filename": "b\u00f6senbrunn.json",
+        "regex": "^BOE-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "City-Hotel": {
+        "filename": "city-hotel.json",
+        "regex": "^PL-Neundorfer23-City-Hotel.*",
+        "tags": [
+            "place",
+            "venue"
+        ]
+    },
+    "Eichigt": {
+        "domain_code": "ffv_eic",
+        "filename": "eichigt.json",
+        "regex": "^EIC-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Ellefeld": {
+        "domain_code": "ffv_ell",
+        "filename": "ellefeld.json",
+        "regex": "^ELL-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Elsterberg": {
+        "domain_code": "ffv_els",
+        "filename": "elsterberg.json",
+        "regex": "^ELS-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Falkenstein": {
+        "domain_code": "ffv_fst",
+        "filename": "falkenstein.json",
+        "regex": "^FST-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Gr\u00fcnbach": {
+        "domain_code": "ffv_gb",
+        "filename": "gruenbach.json",
+        "regex": "^GB-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Heinsdorfergrund": {
+        "domain_code": "ffv_hdg",
+        "filename": "heinsdorfergrund.json",
+        "regex": "^HDG-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Hotel Alexandra": {
+        "filename": "hotel-alexandra.json",
+        "regex": "^PL-Bahnhof17-HotelAlexandra.*",
+        "tags": [
+            "place",
+            "venue"
+        ]
+    },
+    "KlangGarten - Kurzfilm- & Musikfestival": {
+        "filename": "klanggarten.json",
+        "regex": "^PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)",
+        "tags": [
+            "place",
+            "event"
+        ]
+    },
+    "Klingenthal": {
+        "domain_code": "ffv_k",
+        "filename": "klingenthal.json",
+        "regex": "^K-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Lengenfeld": {
+        "domain_code": "ffv_le",
+        "filename": "lengenfeld.json",
+        "regex": "^LE-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Limbach": {
+        "domain_code": "ffv_l",
+        "filename": "limbach.json",
+        "regex": "^L-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Markneukirchen": {
+        "domain_code": "ffv_mkn",
+        "filename": "markneukirchen.json",
+        "regex": "^MKN-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Muldenhammer": {
+        "domain_code": "ffv_mh",
+        "filename": "muldenhammer.json",
+        "regex": "^MH-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "M\u00fchlental": {
+        "domain_code": "ffv_mtl",
+        "filename": "muehlental.json",
+        "regex": "^MTL-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Netzschkau": {
+        "domain_code": "ffv_n",
+        "filename": "netzschkau.json",
+        "regex": "^N-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Neuensalz": {
+        "domain_code": "ffv_nsz",
+        "filename": "neuensalz.json",
+        "regex": "^NSZ-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Neumark": {
+        "domain_code": "ffv_nmk",
+        "filename": "neumark.json",
+        "regex": "^NMK-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Neustadt": {
+        "domain_code": "ffv_nst",
+        "filename": "neustadt.json",
+        "regex": "^NST-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Oelsnitz": {
+        "domain_code": "ffv_oel",
+        "filename": "oelsnitz.json",
+        "regex": "^OEL-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "PL-Johanniskirche": {
+        "filename": "pl_johanniskirche.json",
+        "regex": "^PL-Johanniskirche-.*",
+        "tags": [
+            "place",
+            "venue"
+        ]
+    },
+    "Parkhotel": {
+        "filename": "parkhotel.json",
+        "regex": "^PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)",
+        "tags": [
+            "place",
+            "venue"
+        ]
+    },
+    "Pausa-M\u00fchltroff": {
+        "domain_code": "ffv_pmf",
+        "filename": "pausa-muehltroff.json",
+        "regex": "^PMF-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Plauen": {
+        "domain_code": "ffv_pl",
+        "filename": "plauen.json",
+        "regex": "^PL-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "P\u00f6hl": {
+        "domain_code": "ffv_poe",
+        "filename": "poehl.json",
+        "regex": "^POE-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Reichenbach": {
+        "domain_code": "ffv_rc",
+        "filename": "reichenbach.json",
+        "regex": "^RC-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Rodewisch": {
+        "domain_code": "ffv_rdw",
+        "filename": "rodewisch.json",
+        "regex": "^RDW-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Rosenbach": {
+        "filename": "rosenbach.json",
+        "regex": "^RBH-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Sch\u00f6neck": {
+        "domain_code": "ffv_s",
+        "filename": "schoeneck.json",
+        "regex": "^S-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Steinberg": {
+        "domain_code": "ffv_sbg",
+        "filename": "steinberg.json",
+        "regex": "^SBG-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Theuma": {
+        "domain_code": "ffv_t",
+        "filename": "theuma.json",
+        "regex": "^T-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Tirpersdorf": {
+        "domain_code": "ffv_tdf",
+        "filename": "tirpersdorf.json",
+        "regex": "^TDF-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Treuen": {
+        "domain_code": "ffv_tr",
+        "filename": "treuen.json",
+        "regex": "^TR-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Triebel": {
+        "domain_code": "ffv_tri",
+        "filename": "triebel.json",
+        "regex": "^TRI-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Weischlitz": {
+        "domain_code": "ffv_wei",
+        "filename": "weischlitz.json",
+        "regex": "^WEI-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Werda": {
+        "domain_code": "ffv_wer",
+        "filename": "werda.json",
+        "regex": "^WER-.*",
+        "tags": [
+            "place",
+            "municipality"
+        ]
+    },
+    "Zum Kerkermeister - Auerbach": {
+        "filename": "zum-kerkermeister.json",
+        "regex": "^AE-Kirchpl1-Kerkermeister*",
+        "tags": [
+            "place",
+            "venue"
+        ]
+    }
 }

@@ -1,185 +1,185 @@
 {
-  "title": "NodeThumbnails",
-  "tags": [
-    "meshviewer"
-  ],
-  "style": "dark",
-  "timezone": "browser",
-  "editable": true,
-  "sharedCrosshair": false,
-  "hideControls": false,
-  "time": {
-    "from": "now-24h",
-    "to": "now"
-  },
-  "timepicker": {
-    "refresh_intervals": [
-      "5s",
-      "10s",
-      "30s",
-      "1m",
-      "5m",
-      "15m",
-      "30m",
-      "1h",
-      "2h",
-      "1d"
-    ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
-  },
-  "templating": {
-    "list": [
-      {
-        "current": {},
-        "datasource": "local",
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "node",
-        "options": [],
-        "query": "freifunk.node.*",
-        "refresh": 1,
-        "regex": "",
-        "type": "query",
-        "label": null,
-        "sort": 0,
-        "allValue": null,
-        "tagsQuery": null,
-        "tagValuesQuery": null
-      }
-    ]
-  },
-  "annotations": {
-    "list": []
-  },
-  "refresh": "1m",
-  "schemaVersion": 13,
-  "version": 7,
-  "links": [],
-  "gnetId": null,
-  "rows": [
-    {
-      "title": "Row",
-      "panels": [],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": "250px",
-      "repeat": null,
-      "repeatRowId": null,
-      "repeatIteration": null,
-      "collapse": false
+    "annotations": {
+        "list": []
     },
-    {
-      "title": "New row",
-      "panels": [
+    "editable": true,
+    "gnetId": null,
+    "hideControls": false,
+    "links": [],
+    "refresh": "1m",
+    "rows": [
         {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "local",
-          "decimals": 1,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "id": 6,
-          "legend": {
-            "alignAsTable": false,
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "rightSide": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "minSpan": 3,
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 5,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "hide": false,
-              "refId": "A",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{rx,mgmt_rx}.bytes), 8)), 'rx')",
-              "textEditor": false
-            },
-            {
-              "hide": false,
-              "refId": "B",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{tx,mgmt_tx}.bytes), 8)), 'tx')",
-              "textEditor": false
-            },
-            {
-              "hide": false,
-              "refId": "E",
-              "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes), 8)), 'forward')",
-              "textEditor": false
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Traffic",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "show": true,
-            "mode": "time",
-            "name": null,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "bps",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": false
-            }
-          ],
-          "thresholds": []
+            "collapse": false,
+            "height": "250px",
+            "panels": [],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": false,
+            "title": "Row",
+            "titleSize": "h6"
+        },
+        {
+            "collapse": false,
+            "height": "350px",
+            "panels": [
+                {
+                    "aliasColors": {},
+                    "bars": false,
+                    "datasource": "local",
+                    "decimals": 1,
+                    "editable": true,
+                    "error": false,
+                    "fill": 1,
+                    "grid": {},
+                    "id": 6,
+                    "legend": {
+                        "alignAsTable": false,
+                        "avg": false,
+                        "current": false,
+                        "max": false,
+                        "min": false,
+                        "rightSide": false,
+                        "show": true,
+                        "total": false,
+                        "values": false
+                    },
+                    "lines": true,
+                    "linewidth": 2,
+                    "links": [],
+                    "minSpan": 3,
+                    "nullPointMode": "null",
+                    "percentage": false,
+                    "pointradius": 5,
+                    "points": false,
+                    "renderer": "flot",
+                    "seriesOverrides": [],
+                    "span": 5,
+                    "stack": false,
+                    "steppedLine": false,
+                    "targets": [
+                        {
+                            "hide": false,
+                            "refId": "A",
+                            "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{rx,mgmt_rx}.bytes), 8)), 'rx')",
+                            "textEditor": false
+                        },
+                        {
+                            "hide": false,
+                            "refId": "B",
+                            "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.{tx,mgmt_tx}.bytes), 8)), 'tx')",
+                            "textEditor": false
+                        },
+                        {
+                            "hide": false,
+                            "refId": "E",
+                            "target": "alias(sumSeries(scaleToSeconds(nonNegativeDerivative(freifunk.node.$node.*.traffic.forward.bytes), 8)), 'forward')",
+                            "textEditor": false
+                        }
+                    ],
+                    "thresholds": [],
+                    "timeFrom": null,
+                    "timeShift": null,
+                    "title": "Traffic",
+                    "tooltip": {
+                        "msResolution": false,
+                        "shared": true,
+                        "sort": 0,
+                        "value_type": "individual"
+                    },
+                    "type": "graph",
+                    "xaxis": {
+                        "mode": "time",
+                        "name": null,
+                        "show": true,
+                        "values": []
+                    },
+                    "yaxes": [
+                        {
+                            "format": "bps",
+                            "label": null,
+                            "logBase": 1,
+                            "max": null,
+                            "min": null,
+                            "show": true
+                        },
+                        {
+                            "format": "short",
+                            "label": null,
+                            "logBase": 1,
+                            "max": null,
+                            "min": null,
+                            "show": false
+                        }
+                    ]
+                }
+            ],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": false,
+            "title": "New row",
+            "titleSize": "h6"
         }
-      ],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": "350px",
-      "repeat": null,
-      "repeatRowId": null,
-      "repeatIteration": null,
-      "collapse": false
-    }
-  ]
+    ],
+    "schemaVersion": 13,
+    "sharedCrosshair": false,
+    "style": "dark",
+    "tags": [
+        "meshviewer"
+    ],
+    "templating": {
+        "list": [
+            {
+                "allValue": null,
+                "current": {},
+                "datasource": "local",
+                "hide": 0,
+                "includeAll": false,
+                "label": null,
+                "multi": false,
+                "name": "node",
+                "options": [],
+                "query": "freifunk.node.*",
+                "refresh": 1,
+                "regex": "",
+                "sort": 0,
+                "tagValuesQuery": null,
+                "tagsQuery": null,
+                "type": "query"
+            }
+        ]
+    },
+    "time": {
+        "from": "now-24h",
+        "to": "now"
+    },
+    "timepicker": {
+        "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+        ],
+        "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+        ]
+    },
+    "timezone": "browser",
+    "title": "NodeThumbnails",
+    "version": 7
 }
