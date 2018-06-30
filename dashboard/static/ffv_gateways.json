@@ -81,7 +81,7 @@
             "links": [],
             "mode": "markdown",
             "title": "",
-            "transparent": true,
+            "transparent": false,
             "type": "text"
         },
         {
@@ -181,7 +181,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -237,7 +237,7 @@
             "links": [],
             "mode": "markdown",
             "title": "",
-            "transparent": true,
+            "transparent": false,
             "type": "text"
         },
         {
@@ -376,7 +376,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,

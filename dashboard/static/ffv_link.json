@@ -241,7 +241,7 @@
             ],
             "title": "Knoten",
             "transform": "table",
-            "transparent": true,
+            "transparent": false,
             "type": "table"
         },
         {
@@ -415,7 +415,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -594,7 +594,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -741,7 +741,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -888,7 +888,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,

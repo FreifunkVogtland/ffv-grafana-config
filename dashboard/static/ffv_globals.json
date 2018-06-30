@@ -207,7 +207,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -313,7 +313,7 @@
             ],
             "timeFrom": null,
             "title": "Firmware",
-            "transparent": true,
+            "transparent": false,
             "type": "grafana-piechart-panel",
             "valueName": "current"
         },
@@ -398,7 +398,7 @@
             ],
             "timeFrom": null,
             "title": "Autoupdater",
-            "transparent": true,
+            "transparent": false,
             "type": "grafana-piechart-panel",
             "valueName": "current"
         },
@@ -476,7 +476,7 @@
             "timeFrom": null,
             "timeShift": null,
             "title": "Model",
-            "transparent": true,
+            "transparent": false,
             "type": "grafana-piechart-panel",
             "valueName": "current"
         },
@@ -587,7 +587,7 @@
             "timeFrom": null,
             "timeShift": null,
             "title": "Clients",
-            "transparent": true,
+            "transparent": false,
             "type": "grafana-piechart-panel",
             "valueName": "current"
         },
@@ -692,7 +692,7 @@
                 "sort": 2,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -824,7 +824,7 @@
                 "sort": 2,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,

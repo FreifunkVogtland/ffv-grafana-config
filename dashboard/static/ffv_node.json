@@ -169,7 +169,7 @@
             ],
             "thresholds": "",
             "title": "Hostname",
-            "transparent": true,
+            "transparent": false,
             "type": "singlestat",
             "valueFontSize": "80%",
             "valueMaps": [
@@ -289,7 +289,7 @@
             ],
             "thresholds": "5d,7d",
             "title": "Clients",
-            "transparent": true,
+            "transparent": false,
             "type": "singlestat",
             "valueFontSize": "70%",
             "valueMaps": [
@@ -409,7 +409,7 @@
             ],
             "thresholds": "5d,7d",
             "title": "Uptime",
-            "transparent": true,
+            "transparent": false,
             "type": "singlestat",
             "valueFontSize": "50%",
             "valueMaps": [
@@ -507,7 +507,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -690,7 +690,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -879,7 +879,7 @@
                 "sort": 0,
                 "value_type": "individual"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -1037,7 +1037,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -1201,7 +1201,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -1359,7 +1359,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
@@ -1587,7 +1587,7 @@
                 "sort": 0,
                 "value_type": "cumulative"
             },
-            "transparent": true,
+            "transparent": false,
             "type": "graph",
             "xaxis": {
                 "buckets": null,
