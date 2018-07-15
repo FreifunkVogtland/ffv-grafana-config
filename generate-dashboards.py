@@ -30,9 +30,13 @@ def get_id_name_pairs(meshviewerjson):
         if 'hostname' not in node:
             continue
 
+        if 'site_code' not in node:
+            continue
+
         id_pair = {
             'id': node['node_id'],
             'name': asciify(node['hostname']),
+            'domain_code': asciify(node['site_code']),
         }
         id_name_pairs.append(id_pair)
 
@@ -40,9 +44,28 @@ def get_id_name_pairs(meshviewerjson):
     return id_name_pairs
 
 
-def filter_id_name_pairs(id_name_pairs, regex):
-    r = re.compile(regex)
-    return list(filter(lambda n: r.match(n['name']), id_name_pairs))
+def match_node(n, r, domain_code):
+    if r and r.match(n['name']):
+        return True
+
+    if domain_code and domain_code == n['domain_code']:
+        return True
+
+    return False
+
+
+def filter_id_name_pairs(id_name_pairs, filters):
+    if 'regex' in filters:
+        r = re.compile(filters['regex'])
+    else:
+        r = None
+
+    if 'domain_code' in filters:
+        domain_code = filters['domain_code']
+    else:
+        domain_code = None
+
+    return list(filter(lambda n: match_node(n, r, domain_code), id_name_pairs))
 
 
 def generate_place_dashboard(id_name_pairs, place_template, title, tags):
@@ -73,11 +96,10 @@ def generate_places(place_filter, id_name_pairs, templatepath, outpath):
     place_template = json.load(open(os.path.join(templatepath, "place.json")))
 
     for title in place_filter:
-        regex = place_filter[title]['regex']
         filename = place_filter[title]['filename']
         tags = place_filter[title]['tags']
 
-        place_pairs = filter_id_name_pairs(id_name_pairs, regex)
+        place_pairs = filter_id_name_pairs(id_name_pairs, place_filter[title])
 
         dashboard = generate_place_dashboard(place_pairs, place_template,
                                              title, tags)
