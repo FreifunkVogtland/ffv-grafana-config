@@ -36,6 +36,7 @@ def get_id_name_pairs(nodelistjson):
         }
         id_name_pairs.append(id_pair)
 
+    id_name_pairs.sort(key=lambda pair: pair['id'])
     return id_name_pairs
 
 
