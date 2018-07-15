@@ -20,19 +20,19 @@ def asciify(s):
     return s.encode('ascii', 'replace').decode('ascii')
 
 
-def get_id_name_pairs(nodelistjson):
+def get_id_name_pairs(meshviewerjson):
     id_name_pairs = []
 
-    for node in nodelistjson['nodes']:
-        if 'id' not in node:
+    for node in meshviewerjson['nodes']:
+        if 'node_id' not in node:
             continue
 
-        if 'name' not in node:
+        if 'hostname' not in node:
             continue
 
         id_pair = {
-            'id': node['id'],
-            'name': asciify(node['name']),
+            'id': node['node_id'],
+            'name': asciify(node['hostname']),
         }
         id_name_pairs.append(id_pair)
 
@@ -153,17 +153,17 @@ def generate_node(id_name_pairs, templatepath, outpath):
 
 def main():
     if len(sys.argv) != 4:
-        print("./generate-dashboards.py NODELIST TEMPLATEPATH OUTPATH")
+        print("./generate-dashboards.py MESHVIEWERJSON TEMPLATEPATH OUTPATH")
         sys.exit(1)
 
-    nodelistjson = sys.argv[1]
+    meshviewerjson = sys.argv[1]
     templatepath = sys.argv[2]
     outpath = sys.argv[3]
 
     # load
     place_filter = json.load(open(os.path.join(templatepath,
                                                'place_filter.json')))
-    nodelist = json.load(open(nodelistjson))
+    nodelist = json.load(open(meshviewerjson))
     id_name_pairs = get_id_name_pairs(nodelist)
 
     # store
