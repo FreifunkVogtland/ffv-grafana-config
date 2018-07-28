@@ -794,7 +794,7 @@
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT NON_NEGATIVE_DERIVATIVE(\"down\") * 8 AS \"down\",   NON_NEGATIVE_DERIVATIVE(\"up\") * 8 AS \"up\", NON_NEGATIVE_DERIVATIVE(\"mgmt_down\") * 8 AS \"mgmt_down\",  NON_NEGATIVE_DERIVATIVE(\"mgmt_up\") * 8 AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(\"forward\") * 8 AS \"forward\" FROM (SELECT LAST(\"traffic.rx.bytes\") AS \"down\", LAST(\"traffic.tx.bytes\") as \"up\", LAST(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\", LAST(\"traffic.mgmt_tx.bytes\") AS \"mgmt_up\", LAST(\"traffic.forward.bytes\") AS \"forward\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY time($interval) fill(none))",
+                    "query": "SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.rx.bytes\"), 1s) * 8 AS \"down\",   NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.tx.bytes\"), 1s) * 8 AS \"up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_rx.bytes\"), 1s) * 8 * count(\"traffic.mgmt_rx.bytes\") / count(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\",  NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_tx.bytes\"), 1s) * 8 AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.forward.bytes\"), 1s) * 8 AS \"forward\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY time($interval) fill(null)",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
