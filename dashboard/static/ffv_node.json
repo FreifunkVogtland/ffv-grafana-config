@@ -58,7 +58,7 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 2,
-    "iteration": 1532864271700,
+    "iteration": 1532865333595,
     "links": [
         {
             "icon": "bolt",
@@ -251,16 +251,23 @@
                         },
                         {
                             "params": [
+                                "nodeid"
+                            ],
+                            "type": "tag"
+                        },
+                        {
+                            "params": [
                                 "null"
                             ],
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT last(\"time.up\") AS \"uptime\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time($interval) fill(null)",
-                    "rawQuery": false,
+                    "query": "SELECT sum(\"clients\") FROM (SELECT mean(\"clients.total\") as \"clients\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY time($__interval), \"nodeid\" fill(null)) GROUP BY time($__interval)",
+                    "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
                     "select": [
@@ -371,16 +378,23 @@
                         },
                         {
                             "params": [
+                                "nodeid"
+                            ],
+                            "type": "tag"
+                        },
+                        {
+                            "params": [
                                 "null"
                             ],
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT last(\"time.up\") AS \"uptime\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time($interval) fill(null)",
-                    "rawQuery": false,
+                    "query": "SELECT min(\"uptime\") FROM (SELECT mean(\"time.up\") as \"uptime\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY time($__interval), \"nodeid\" fill(null)) GROUP BY time($__interval)",
+                    "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
                     "select": [
@@ -474,6 +488,7 @@
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "orderByTime": "ASC",
                     "policy": "default",
                     "query": "SELECT sum(\"missing_response\")/(sum(\"missing_response\")+sum(\"received_response\"))*100 as \"Missing Statistics Data\" FROM\n(SELECT 1-count(\"clients.total\") AS \"missing_response\", count(\"clients.total\") AS \"received_response\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time([[saveinterval]]s) fill(0))\nGROUP BY time($__interval*10) fill(null)",
@@ -625,11 +640,12 @@
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT sum(\"clients.total\") *$time_save/$time_group AS \"Clients\", count(\"load\") *$time_save/$time_group AS \"Node\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY time([[time_group]]s) fill(null)",
-                    "rawQuery": false,
+                    "query": "SELECT sum(\"Clients\") AS \"Clients\",  sum(\"5 GHz\") AS \"5 GHz\" FROM (SELECT mean(\"clients.total\") AS \"Clients\", mean(\"clients.wifi5\") AS \"5 GHz\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
+                    "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
                     "select": [
@@ -793,7 +809,7 @@
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.rx.bytes\"), 1s) * 8 AS \"down\",   NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.tx.bytes\"), 1s) * 8 AS \"up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_rx.bytes\"), 1s) * 8 * count(\"traffic.mgmt_rx.bytes\") / count(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\",  NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_tx.bytes\"), 1s) * 8 AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.forward.bytes\"), 1s) * 8 AS \"forward\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY time($interval) fill(null)",
+                    "query": "SELECT sum(\"down\") AS \"down\", sum(\"up\") AS \"up\", sum(\"mgmt_down\") AS \"mgmt_down\",  sum(\"mgmt_up\") AS \"mgmt_up\", sum(\"forward\") AS \"forward\" FROM (SELECT NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.rx.bytes\"), 1s) * 8 AS \"down\",   NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.tx.bytes\"), 1s) * 8 AS \"up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_rx.bytes\"), 1s) * 8 * count(\"traffic.mgmt_rx.bytes\") / count(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\",  NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.mgmt_tx.bytes\"), 1s) * 8 AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(LAST(\"traffic.forward.bytes\"), 1s) * 8 AS \"forward\" FROM \"node\" WHERE (\"nodeid\" =~ /^$node$/) AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -972,10 +988,11 @@
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"neighbours.total\") AS \"Total\", mean(\"neighbours.vpn\") AS \"VPN\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY time($interval) fill(null)",
+                    "query": "SELECT sum(\"Total\") AS \"Total\",  sum(\"VPN\") AS \"VPN\" FROM (SELECT mean(\"neighbours.total\") AS \"Total\", mean(\"neighbours.vpn\") AS \"VPN\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1133,7 +1150,7 @@
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"load\") AS \"Load\", (1-(mean(memory.free)+mean(memory.buffers)+mean(memory.cached))/mean(memory.total) ) AS \"Mem\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time($interval) fill(null)",
+                    "query": "SELECT mean(\"Load\") AS \"Load\", mean(\"Mem\") AS \"Mem\" FROM (SELECT mean(\"load\") AS \"Load\", (1-(mean(memory.free)+mean(memory.buffers)+mean(memory.cached))/mean(memory.total) ) AS \"Mem\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1294,11 +1311,12 @@
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"airtime11g.chan_util\") *$time_save/$time_group AS \"2.4 Ghz\", mean(\"airtime11a.chan_util\") *$time_save/$time_group AS \"5 Ghz\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY time([[time_group]]s) fill(null)",
-                    "rawQuery": false,
+                    "query": "SELECT max(\"5 Ghz\") AS \"5 Ghz\", max(\"2.4 Ghz\") AS \"2.4 Ghz\" FROM (SELECT mean(\"airtime11a.chan_util\") AS \"5 Ghz\", mean(\"airtime11g.chan_util\") AS \"2.4 Ghz\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
+                    "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
                     "select": [
@@ -1486,10 +1504,11 @@
                             "type": "fill"
                         }
                     ],
+                    "hide": false,
                     "measurement": "node",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"clients.total\") AS \"Clients\", mean(\"clients.wifi\") AS \"Wifi\", mean(\"clients.wifi5\") AS \"5Ghz\", count(\"load\") AS \"Node\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY time($interval) fill(null)",
+                    "query": "SELECT sum(\"Clients\") AS \"Clients\", sum(\"Wifi\") AS \"Wifi\", sum(\"5Ghz\") AS \"5Ghz\", sum(\"Node\") AS \"Node\" FROM (SELECT mean(\"clients.total\") AS \"Clients\", mean(\"clients.wifi\") AS \"Wifi\", mean(\"clients.wifi5\") AS \"5Ghz\", count(\"load\") AS \"Node\" FROM \"node\" WHERE \"nodeid\" =~ /$node$/ AND $timeFilter GROUP BY \"nodeid\",time($interval) fill(null)) GROUP BY time($interval)",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1722,5 +1741,5 @@
     "timezone": "browser",
     "title": "NodeInfo",
     "uid": "ffv_node",
-    "version": 5
+    "version": 6
 }
