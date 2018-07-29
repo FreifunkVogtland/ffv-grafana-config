@@ -306,7 +306,7 @@
                     "hide": false,
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT NON_NEGATIVE_DERIVATIVE(\"down\")*8 AS \"down\", NON_NEGATIVE_DERIVATIVE(\"up\")*8 AS \"up\", NON_NEGATIVE_DERIVATIVE(\"mgmt_up\")*8*MOVING_AVERAGE(\"neighbours\", 2) AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(\"mgmt_down\")*8 AS \"mgmt_down\" FROM (SELECT LAST(\"traffic.rx.bytes\") AS \"down\", LAST(\"traffic.tx.bytes\") AS \"up\", LAST(\"traffic.mgmt_tx.bytes\") AS \"mgmt_up\", LAST(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\", LAST(\"neighbours.batadv\") AS \"neighbours\" FROM \"node\" WHERE hostname ='$hostname' AND $timeFilter GROUP BY time($interval) fill(null))",
+                    "query": "SELECT NON_NEGATIVE_DERIVATIVE(\"down\")*8 AS \"down\", NON_NEGATIVE_DERIVATIVE(\"up\")*8 AS \"up\", NON_NEGATIVE_DERIVATIVE(\"mgmt_up\")*8*MOVING_AVERAGE(\"neighbours\", 2) / 3 AS \"mgmt_up\", NON_NEGATIVE_DERIVATIVE(\"mgmt_down\")*8 AS \"mgmt_down\" FROM (SELECT LAST(\"traffic.rx.bytes\") AS \"down\", LAST(\"traffic.tx.bytes\") AS \"up\", LAST(\"traffic.mgmt_tx.bytes\") AS \"mgmt_up\", LAST(\"traffic.mgmt_rx.bytes\") AS \"mgmt_down\", LAST(\"neighbours.batadv\") AS \"neighbours\" FROM \"node\" WHERE hostname ='$hostname' AND $timeFilter GROUP BY time($interval) fill(null))",
                     "rawQuery": true,
                     "refId": "A",
                     "resultFormat": "time_series",
