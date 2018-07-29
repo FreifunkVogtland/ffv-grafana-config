@@ -58,8 +58,7 @@
     "editable": true,
     "gnetId": null,
     "graphTooltip": 2,
-    "id": null,
-    "iteration": 1530303921284,
+    "iteration": 1532864271700,
     "links": [
         {
             "icon": "bolt",
@@ -1637,7 +1636,7 @@
                 "hide": 0,
                 "includeAll": false,
                 "label": null,
-                "multi": false,
+                "multi": true,
                 "multiFormat": "regex values",
                 "name": "node",
                 "options": [],
@@ -1723,5 +1722,5 @@
     "timezone": "browser",
     "title": "NodeInfo",
     "uid": "ffv_node",
-    "version": 3
+    "version": 5
 }
