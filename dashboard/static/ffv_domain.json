@@ -547,8 +547,8 @@
                 "allValue": null,
                 "current": {
                     "tags": [],
-                    "text": "ffv_rc",
-                    "value": "ffv_rc"
+                    "text": "ffv",
+                    "value": "ffv"
                 },
                 "datasource": "ffv",
                 "hide": 0,
