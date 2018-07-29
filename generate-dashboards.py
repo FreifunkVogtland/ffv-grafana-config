@@ -111,37 +111,6 @@ def generate_places(place_filter, id_name_pairs, templatepath, outpath):
         os.rename(outfiletmp, outfile)
 
 
-def generate_nodegroup(id_name_pairs, templatepath, outpath):
-    dashboard = json.load(open(os.path.join(templatepath, "nodegroup.json")))
-    filename = 'nodegroup.json'
-
-    dashboard['templating']['list'][0]['options'] = []
-    options = []
-    for p in id_name_pairs:
-        option = {
-            "value": p['id'],
-            "text": "%s (%s)" % (p['name'], p['id']),
-            "selected": False
-        }
-        options.append(option)
-
-    options = sorted(options, key=lambda k: k['text'])
-    if options:
-        options[0]['selected'] = True
-        dashboard['templating']['list'][0]['current'] = {
-            "tags": [],
-            "text": options[0]["text"],
-            "value": options[0]["value"]
-        }
-
-    dashboard['templating']['list'][0]['options'] = options
-    outfile = os.path.join(outpath, filename)
-    outfiletmp = os.path.join(outpath, '%s.tmp' % (filename))
-
-    dump_json(dashboard, outfiletmp)
-    os.rename(outfiletmp, outfile)
-
-
 def main():
     if len(sys.argv) != 4:
         print("./generate-dashboards.py MESHVIEWERJSON TEMPLATEPATH OUTPATH")
@@ -159,7 +128,6 @@ def main():
 
     # store
     generate_places(place_filter, id_name_pairs, templatepath, outpath)
-    generate_nodegroup(id_name_pairs, templatepath, outpath)
 
 
 if __name__ == "__main__":
