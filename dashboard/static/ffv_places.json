@@ -555,7 +555,7 @@
                 },
                 "hide": 0,
                 "includeAll": false,
-                "label": null,
+                "label": "Place",
                 "multi": false,
                 "name": "hostnameregex",
                 "options": [
