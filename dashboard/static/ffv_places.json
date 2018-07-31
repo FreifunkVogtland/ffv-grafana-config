@@ -572,7 +572,7 @@
                     {
                         "selected": false,
                         "text": "KlangGarten - Kurzfilm- & Musikfestival",
-                        "value": "PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten\\d)"
+                        "value": "PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten.*)"
                     },
                     {
                         "selected": false,
