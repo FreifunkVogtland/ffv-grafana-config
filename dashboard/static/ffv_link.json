@@ -69,7 +69,7 @@
             "title": "Map",
             "tooltip": "Meshviewer",
             "type": "link",
-            "url": "https://map.ffhb.de/#/en/map/$node-$nodetolink"
+            "url": "https://vogtland.freifunk.net/map/#!/map/$node-$nodetolink"
         }
     ],
     "panels": [

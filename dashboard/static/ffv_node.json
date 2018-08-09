@@ -68,7 +68,7 @@
             "title": "Node on Map",
             "tooltip": "Meshviewer",
             "type": "link",
-            "url": "http://vogtland.freifunk.net/map/#!v:m;n:$node"
+            "url": "https://vogtland.freifunk.net/map/#!/map/$node"
         }
     ],
     "panels": [
