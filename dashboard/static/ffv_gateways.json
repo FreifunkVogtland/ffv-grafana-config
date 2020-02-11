@@ -545,7 +545,7 @@
                 "options": [],
                 "query": "SHOW TAG VALUES FROM \"gatemon\" WITH KEY = \"server\"",
                 "refresh": 2,
-                "regex": "/^vpn0[1235789].bremen.freifunk.net$/",
+                "regex": "/^vpn0[1235789].vogtland.freifunk.net$/",
                 "sort": 1,
                 "tagValuesQuery": "",
                 "tags": [],
