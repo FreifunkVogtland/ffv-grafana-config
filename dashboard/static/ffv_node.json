@@ -133,7 +133,7 @@
             "mean"
           ],
           "fields": "/^hostname$/",
-          "values": false
+          "values": true
         },
         "textMode": "auto"
       },
