@@ -1,41 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_FFV",
-      "label": "ffv",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__elements": {},
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "9.0.5"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph (old)",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table-old",
-      "name": "Table (old)",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -61,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "id": null,
+  "id": 80,
   "links": [
     {
       "icon": "bolt",
@@ -91,7 +54,6 @@
         "y": 0
       },
       "id": 11,
-      "links": [],
       "scroll": true,
       "showHeader": true,
       "sort": {
@@ -284,7 +246,6 @@
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -496,7 +457,6 @@
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -684,7 +644,6 @@
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -836,7 +795,6 @@
       },
       "lines": true,
       "linewidth": 1,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -959,8 +917,7 @@
     }
   ],
   "refresh": "1m",
-  "schemaVersion": 36,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [
     "nodes",
     "meshviewer"
@@ -970,7 +927,11 @@
       {
         "allFormat": "regex wildcard",
         "allValue": "*",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": {
           "type": "influxdb",
           "uid": "000000002"
@@ -992,6 +953,7 @@
       },
       {
         "current": {
+          "selected": false,
           "text": "60",
           "value": "60"
         },
@@ -1029,7 +991,11 @@
       {
         "allFormat": "regex wildcard",
         "allValue": "(.*)",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "000c29d1b00e",
+          "value": "000c29d1b00e"
+        },
         "datasource": {
           "type": "influxdb",
           "uid": "000000002"
@@ -1051,7 +1017,11 @@
       {
         "allFormat": "regex wildcard",
         "allValue": "(.*)",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "02:12:7b:00:01:00",
+          "value": "02:12:7b:00:01:00"
+        },
         "datasource": {
           "type": "influxdb",
           "uid": "000000002"
@@ -1073,7 +1043,11 @@
       {
         "allFormat": "regex wildcard",
         "allValue": "(.*)",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "02:12:7b:00:01:00",
+          "value": "02:12:7b:00:01:00"
+        },
         "datasource": {
           "type": "influxdb",
           "uid": "000000002"
@@ -1128,6 +1102,6 @@
   "timezone": "browser",
   "title": "Link",
   "uid": "ffv_link",
-  "version": 8,
+  "version": 10,
   "weekStart": ""
 }

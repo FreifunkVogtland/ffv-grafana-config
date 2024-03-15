@@ -1,35 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_FFV",
-      "label": "ffv",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__elements": {},
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "9.0.5"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph (old)",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -55,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": null,
+  "id": 91,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -91,7 +60,6 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -225,7 +193,6 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -365,7 +332,6 @@
       },
       "lines": true,
       "linewidth": 2,
-      "links": [],
       "nullPointMode": "null",
       "options": {
         "alertThreshold": true
@@ -598,9 +564,8 @@
       }
     }
   ],
-  "refresh": false,
-  "schemaVersion": 36,
-  "style": "dark",
+  "refresh": "1m",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": [
@@ -615,45 +580,14 @@
         "label": "Place",
         "multi": false,
         "name": "hostnameregex",
-        "options": [
-          {
-            "selected": true,
-            "text": "City-Hotel",
-            "value": "PL-Neundorfer23-City-Hotel.*"
-          },
-          {
-            "selected": false,
-            "text": "Hotel Alexandra",
-            "value": "PL-Bahnhof17-HotelAlexandra.*"
-          },
-          {
-            "selected": false,
-            "text": "KlangGarten - Kurzfilm- & Musikfestival",
-            "value": "PL-(Walkgasse7-ViVo|Bleich3-WeisbachschesHaus-\\d|FFV-Klanggarten.*)"
-          },
-          {
-            "selected": false,
-            "text": "PL-Johanniskirche",
-            "value": "PL-Johanniskirche-.*"
-          },
-          {
-            "selected": false,
-            "text": "Parkhotel",
-            "value": "PL-Raedel18-(Parkhotel-.*|FriesischeBotschaft)"
-          },
-          {
-            "selected": false,
-            "text": "Zum Kerkermeister - Auerbach",
-            "value": "AE-Kirchpl1-Kerkermeister.*"
-          }
-        ],
+        "options": [],
         "query": "",
         "skipUrlSync": false,
         "type": "custom"
       },
       {
         "current": {
-          "tags": [],
+          "selected": false,
           "text": "360",
           "value": "360"
         },
@@ -727,6 +661,6 @@
   "timezone": "",
   "title": "Venues and Events",
   "uid": "ffv_places",
-  "version": 6,
+  "version": 8,
   "weekStart": ""
 }
