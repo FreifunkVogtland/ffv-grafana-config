@@ -199,16 +199,14 @@
       "repeat": "hostname",
       "targets": [
         {
-          "alias": "$col",
           "datasource": {
             "type": "influxdb",
             "uid": "000000002"
           },
-          "dsType": "influxdb",
           "groupBy": [
             {
               "params": [
-                "$interval"
+                "$__interval"
               ],
               "type": "time"
             },
@@ -219,28 +217,92 @@
               "type": "fill"
             }
           ],
+          "hide": false,
           "measurement": "node",
           "orderByTime": "ASC",
-          "policy": "node",
-          "query": "SELECT mean(\"load\") AS \"load\", MEAN(\"neighbours.batadv\") AS \"neighbours\" FROM \"node\" WHERE hostname ='$hostname' AND $timeFilter GROUP BY time($interval) fill(previous)",
-          "rawQuery": true,
-          "refId": "A",
+          "policy": "default",
+          "refId": "B",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "value"
+                  "load"
                 ],
                 "type": "field"
               },
               {
                 "params": [],
                 "type": "mean"
+              },
+              {
+                "params": [
+                  "load"
+                ],
+                "type": "alias"
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "hostname::tag",
+              "operator": "=~",
+              "value": "/^$hostname$/"
+            }
+          ]
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "000000002"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "node",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "neighbours.batadv"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              },
+              {
+                "params": [
+                  "neighbours"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname::tag",
+              "operator": "=~",
+              "value": "/^$hostname$/"
+            }
+          ]
         }
       ],
       "title": "$hostname",
@@ -652,7 +714,7 @@
         "options": [],
         "query": "SHOW TAG VALUES FROM \"gatemon\" WITH KEY = \"server\"",
         "refresh": 2,
-        "regex": "/^vpn0[1235789].vogtland.freifunk.net$/",
+        "regex": "/^vpn0[12356789].vogtland.freifunk.net$/",
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
@@ -695,6 +757,6 @@
   "timezone": "browser",
   "title": "Gateways",
   "uid": "ffv_gateways",
-  "version": 9,
+  "version": 10,
   "weekStart": ""
 }
