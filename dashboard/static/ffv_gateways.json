@@ -68,10 +68,15 @@
       "height": "1px",
       "id": 23,
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "Die Anzahl der verbundenen Knoten ist pro Gateway auf 300 limitiert. Der Load sollte auf allen Gateways unter der Anzahl der CPU-Kerne bleiben.",
         "mode": "markdown"
       },
-      "pluginVersion": "9.0.5",
+      "pluginVersion": "10.4.0",
       "targets": [
         {
           "datasource": {
@@ -84,59 +89,114 @@
       "type": "text"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "influxdb",
         "uid": "000000002"
       },
-      "fill": 1,
-      "fillGradient": 0,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 1.6,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "node.neighbours"
+            },
+            "properties": [
+              {
+                "id": "max",
+                "value": 310
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "neighbours"
+            },
+            "properties": [
+              {
+                "id": "max",
+                "value": 310
+              }
+            ]
+          }
+        ]
+      },
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 0,
         "y": 4
       },
-      "hiddenSeries": false,
       "id": 7,
       "interval": "[[time_group]]s",
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
       "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "9.0.5",
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "repeat": "hostname",
-      "seriesOverrides": [
-        {
-          "alias": "node.neighbours",
-          "yaxis": 2
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
         },
-        {
-          "alias": "neighbours",
-          "yaxis": 2
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
         }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
+      },
+      "pluginVersion": "10.4.0",
+      "repeat": "hostname",
       "targets": [
         {
           "alias": "$col",
@@ -183,41 +243,8 @@
           "tags": []
         }
       ],
-      "thresholds": [],
-      "timeRegions": [],
       "title": "$hostname",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "",
-          "logBase": 1,
-          "max": "1.6",
-          "min": "0",
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": "",
-          "logBase": 1,
-          "max": "310",
-          "min": "0",
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -228,7 +255,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 18
       },
       "id": 44,
       "targets": [
@@ -244,7 +271,6 @@
       "type": "row"
     },
     {
-      "content": "Diese Graphen zeigen den weitergeleiteten Traffic je Gateway, gemessen auf dem batman-adv Interface. Das heißt, dass jedes Gateway tatsächlich mindestens das doppelte des hier abgebildeten Traffics verarbeitet: Einmal eingehend, einmal ausgehend, plus Overhead durch batman-adv und das VPN.\n\nDie Kategorie \"mgmt_up\" wird im Graphen mit der Anzahl verbundener Nachbarn multipliziert, da es sich hierbei überwiegend um Broadcast-Traffic handelt, der an jeden Nachbarn geschickt werden muss.",
       "datasource": {
         "type": "influxdb",
         "uid": "000000002"
@@ -253,11 +279,20 @@
         "h": 4,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 19
       },
       "height": "1px",
       "id": 22,
-      "mode": "markdown",
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "Diese Graphen zeigen den weitergeleiteten Traffic je Gateway, gemessen auf dem batman-adv Interface. Das heißt, dass jedes Gateway tatsächlich mindestens das doppelte des hier abgebildeten Traffics verarbeitet: Einmal eingehend, einmal ausgehend, plus Overhead durch batman-adv und das VPN.\n\nDie Kategorie \"mgmt_up\" wird im Graphen mit der Anzahl verbundener Nachbarn multipliziert, da es sich hierbei überwiegend um Broadcast-Traffic handelt, der an jeden Nachbarn geschickt werden muss.",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.4.0",
       "targets": [
         {
           "datasource": {
@@ -270,52 +305,110 @@
       "type": "text"
     },
     {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
       "datasource": {
         "type": "influxdb",
         "uid": "000000002"
       },
-      "fill": 10,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 100,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 0,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "max": 500000000,
+          "min": -100000000,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/down/"
+            },
+            "properties": [
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "B",
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "custom.transform",
+                "value": "negative-Y"
+              }
+            ]
+          }
+        ]
+      },
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 0,
-        "y": 30
+        "y": 23
       },
       "id": 1,
       "interval": "[[time_group]]s",
-      "legend": {
-        "alignAsTable": false,
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
       },
-      "lines": true,
-      "linewidth": 0,
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
+      "pluginVersion": "10.4.0",
       "repeat": "hostname",
       "repeatDirection": "h",
-      "seriesOverrides": [
-        {
-          "alias": "/down/",
-          "stack": "B",
-          "transform": "negative-Y"
-        }
-      ],
-      "spaceLength": 10,
-      "stack": true,
-      "steppedLine": false,
       "targets": [
         {
           "alias": "$col",
@@ -406,37 +499,8 @@
           "tags": []
         }
       ],
-      "thresholds": [],
       "title": "$hostname",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "mode": "time",
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": "",
-          "logBase": 1,
-          "max": "500000000",
-          "min": "-100000000",
-          "show": true
-        },
-        {
-          "format": "short",
-          "logBase": 1,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false
-      }
+      "type": "timeseries"
     }
   ],
   "refresh": "1m",
@@ -631,6 +695,6 @@
   "timezone": "browser",
   "title": "Gateways",
   "uid": "ffv_gateways",
-  "version": 8,
+  "version": 9,
   "weekStart": ""
 }
