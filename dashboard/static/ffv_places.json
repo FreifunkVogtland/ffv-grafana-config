@@ -121,7 +121,7 @@
           "groupBy": [
             {
               "params": [
-                "[[saveinterval]]s"
+                "[[saveinterval]]"
               ],
               "type": "time"
             },
@@ -136,7 +136,7 @@
           "measurement": "node",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "query": "SELECT sum(\"Nutzer\") as \"Nutzer\" FROM (SELECT MEAN(\"clients.total\") AS \"Nutzer\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]]s)) GROUP BY time([[saveinterval]]s)",
+          "query": "SELECT sum(\"Nutzer\") as \"Nutzer\" FROM (SELECT MEAN(\"clients.total\") AS \"Nutzer\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]])) GROUP BY time([[saveinterval]])",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -265,7 +265,7 @@
           "groupBy": [
             {
               "params": [
-                "[[saveinterval]]s"
+                "[[saveinterval]]"
               ],
               "type": "time"
             },
@@ -292,7 +292,7 @@
           "measurement": "node",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "query": "SELECT mean(\"clients.total\") FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) AND $timeFilter GROUP BY time([[saveinterval]]s), \"nodeid\", \"hostname\" fill(null)",
+          "query": "SELECT mean(\"clients.total\") FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) AND $timeFilter GROUP BY time([[saveinterval]]), \"nodeid\", \"hostname\" fill(null)",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -415,7 +415,7 @@
           "groupBy": [
             {
               "params": [
-                "[[saveinterval]]s"
+                "[[saveinterval]]"
               ],
               "type": "time"
             },
@@ -430,7 +430,7 @@
           "measurement": "node",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "query": "SELECT sum(\"Download\") as \"Download\" FROM (SELECT non_negative_derivative(last(\"traffic.rx.bytes\"), 1s) AS \"Download\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]]s)) GROUP BY time([[saveinterval]]s)\n",
+          "query": "SELECT sum(\"Download\") as \"Download\" FROM (SELECT non_negative_derivative(last(\"traffic.rx.bytes\"), 1s) AS \"Download\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]])) GROUP BY time([[saveinterval]])\n",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -477,7 +477,7 @@
           "groupBy": [
             {
               "params": [
-                "[[saveinterval]]s"
+                "[[saveinterval]]"
               ],
               "type": "time"
             },
@@ -492,7 +492,7 @@
           "measurement": "node",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "query": "SELECT sum(\"Upload\") as \"Upload\" FROM (SELECT non_negative_derivative(last(\"traffic.tx.bytes\"), 1s) AS \"Upload\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]]s)) GROUP BY time([[saveinterval]]s)\n",
+          "query": "SELECT sum(\"Upload\") as \"Upload\" FROM (SELECT non_negative_derivative(last(\"traffic.tx.bytes\"), 1s) AS \"Upload\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]])) GROUP BY time([[saveinterval]])\n",
           "rawQuery": true,
           "refId": "B",
           "resultFormat": "time_series",
@@ -539,7 +539,7 @@
           "groupBy": [
             {
               "params": [
-                "[[saveinterval]]s"
+                "[[saveinterval]]"
               ],
               "type": "time"
             },
@@ -554,7 +554,7 @@
           "measurement": "node",
           "orderByTime": "ASC",
           "policy": "autogen",
-          "query": "SELECT sum(\"Mesh\") as \"Mesh\" FROM (SELECT non_negative_derivative(last(\"traffic.forward.bytes\"), 1s) AS \"Mesh\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]]s)) GROUP BY time([[saveinterval]]s)\n",
+          "query": "SELECT sum(\"Mesh\") as \"Mesh\" FROM (SELECT non_negative_derivative(last(\"traffic.forward.bytes\"), 1s) AS \"Mesh\" FROM \"autogen\".\"node\" WHERE (\"hostname\" =~ /^($hostnameregex)$/) and  $timeFilter GROUP BY \"nodeid\", time([[saveinterval]])) GROUP BY time([[saveinterval]])\n",
           "rawQuery": true,
           "refId": "C",
           "resultFormat": "time_series",
@@ -652,8 +652,8 @@
       {
         "current": {
           "selected": false,
-          "text": "360",
-          "value": "360"
+          "text": "360s",
+          "value": "360s"
         },
         "hide": 0,
         "includeAll": false,
@@ -663,33 +663,33 @@
         "options": [
           {
             "selected": true,
-            "text": "360",
-            "value": "360"
+            "text": "360s",
+            "value": "360s"
           },
           {
             "selected": false,
-            "text": "60",
-            "value": "60"
+            "text": "60s",
+            "value": "60s"
           },
           {
             "selected": false,
-            "text": "180",
-            "value": "180"
+            "text": "180s",
+            "value": "180s"
           },
           {
             "selected": false,
-            "text": "600",
-            "value": "600"
+            "text": "600s",
+            "value": "600s"
           },
           {
             "selected": false,
-            "text": "3600",
-            "value": "3600"
+            "text": "3600s",
+            "value": "3600s"
           }
         ],
-        "query": "360,60,180,600,3600",
+        "query": "360s,60s,180s,600s,3600s",
         "skipUrlSync": false,
-        "type": "custom"
+        "type": "interval"
       }
     ]
   },

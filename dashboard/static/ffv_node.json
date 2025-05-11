@@ -502,7 +502,7 @@
           "hide": false,
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT sum(\"missing_response\")/(sum(\"missing_response\")+sum(\"received_response\"))*100 as \"Missing Statistics Data\" FROM\n(SELECT 1-count(\"clients.total\") AS \"missing_response\", count(\"clients.total\") AS \"received_response\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time([[saveinterval]]s) fill(0))\nGROUP BY time($__interval*10) fill(null)",
+          "query": "SELECT sum(\"missing_response\")/(sum(\"missing_response\")+sum(\"received_response\"))*100 as \"Missing Statistics Data\" FROM\n(SELECT 1-count(\"clients.total\") AS \"missing_response\", count(\"clients.total\") AS \"received_response\" FROM \"node\" WHERE (\"nodeid\" =~ /$node$/) AND $timeFilter GROUP BY time([[saveinterval]]) fill(0))\nGROUP BY time($__interval*10) fill(null)",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -653,7 +653,7 @@
         "y": 5
       },
       "id": 1,
-      "interval": ">[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [],
@@ -854,7 +854,7 @@
         "y": 5
       },
       "id": 2,
-      "interval": "[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [
@@ -1042,7 +1042,7 @@
         "y": 13
       },
       "id": 6,
-      "interval": "[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [
@@ -1207,7 +1207,7 @@
         "y": 13
       },
       "id": 4,
-      "interval": ">[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [
@@ -1379,7 +1379,7 @@
         "y": 13
       },
       "id": 5,
-      "interval": ">[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [
@@ -1620,7 +1620,7 @@
         "y": 20
       },
       "id": 3,
-      "interval": "[[saveinterval]]s",
+      "interval": "[[saveinterval]]",
       "options": {
         "legend": {
           "calcs": [
@@ -1792,8 +1792,8 @@
       {
         "current": {
           "selected": false,
-          "text": "60",
-          "value": "60"
+          "text": "60s",
+          "value": "60s"
         },
         "hide": 0,
         "includeAll": false,
@@ -1803,28 +1803,28 @@
         "options": [
           {
             "selected": true,
-            "text": "60",
-            "value": "60"
+            "text": "60s",
+            "value": "60s"
           },
           {
             "selected": false,
-            "text": "360",
-            "value": "360"
+            "text": "360s",
+            "value": "360s"
           },
           {
             "selected": false,
-            "text": "600",
-            "value": "600"
+            "text": "600s",
+            "value": "600s"
           },
           {
             "selected": false,
-            "text": "3600",
-            "value": "3600"
+            "text": "3600s",
+            "value": "3600s"
           }
         ],
-        "query": "60,360,600,3600",
+        "query": "60s,360s,600s,3600s",
         "skipUrlSync": false,
-        "type": "custom"
+        "type": "interval"
       }
     ]
   },

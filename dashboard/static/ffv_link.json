@@ -990,8 +990,8 @@
       {
         "current": {
           "selected": false,
-          "text": "60",
-          "value": "60"
+          "text": "60s",
+          "value": "60s"
         },
         "hide": 0,
         "includeAll": false,
@@ -1001,28 +1001,28 @@
         "options": [
           {
             "selected": true,
-            "text": "60",
-            "value": "60"
+            "text": "60s",
+            "value": "60s"
           },
           {
             "selected": false,
-            "text": "360",
-            "value": "360"
+            "text": "360s",
+            "value": "360s"
           },
           {
             "selected": false,
-            "text": "600",
-            "value": "600"
+            "text": "600s",
+            "value": "600s"
           },
           {
             "selected": false,
-            "text": "3600",
-            "value": "3600"
+            "text": "3600s",
+            "value": "3600s"
           }
         ],
-        "query": "60,360,600,3600",
+        "query": "60s,360s,600s,3600s",
         "skipUrlSync": false,
-        "type": "custom"
+        "type": "interval"
       },
       {
         "allFormat": "regex wildcard",
